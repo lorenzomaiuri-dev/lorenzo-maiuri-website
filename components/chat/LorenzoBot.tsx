@@ -1,4 +1,4 @@
-import React, { useState,} from 'react';
+import React, { useState, useRef} from 'react';
 import { type Message, type ChatResponseAction, type ToastState, LorenzoBotProps } from '@/lib/types';
 
 import Toast from '../common/Toast'; 
@@ -6,6 +6,8 @@ import ChatHeader from './ChatHeader';
 import ChatContainer from './ChatContainer';
 import ChatInput from './ChatInput';
 import { useChatbot } from '@/lib/hooks/useChatbot';
+
+const MESSAGE_COOLDOWN_SECONDS = (process.env.FRONTEND_MESSAGE_COOLDOWN) ? parseInt(process.env.FRONTEND_MESSAGE_COOLDOWN) : 10000;
 
 const LorenzoBot: React.FC<LorenzoBotProps> = ({ onNotification }) => {
 
@@ -19,6 +21,10 @@ const LorenzoBot: React.FC<LorenzoBotProps> = ({ onNotification }) => {
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [chatId, setChatId] = useState<string>('');
+
+  const [isOnCooldown, setIsOnCooldown] = useState(false);
+  const cooldownTimerRef = useRef<NodeJS.Timeout | null>(null);
+
   const [toast, _setToast] = useState<ToastState | null>(null);
 
   // Custom setToast function that also triggers the onNotification callback
@@ -100,8 +106,25 @@ const LorenzoBot: React.FC<LorenzoBotProps> = ({ onNotification }) => {
   const sendMessage = async () => {
     if (!inputMessage.trim() || isLoading) return;
 
+    if (isOnCooldown) {
+      setToast({
+        show: true,
+        message: `Please wait ${MESSAGE_COOLDOWN_SECONDS/1000} seconds before sending another message.`,
+        type: 'warning',
+        duration: 2000,
+      });
+      return;
+    }
+
     const currentInput = inputMessage;
     setInputMessage('');
+
+    // Activate cooldown
+    setIsOnCooldown(true);
+    cooldownTimerRef.current = setTimeout(() => {
+      setIsOnCooldown(false);
+      cooldownTimerRef.current = null;
+    }, MESSAGE_COOLDOWN_SECONDS);
 
     await sendMessageToApi(currentInput);
   };
