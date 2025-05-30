@@ -1,0 +1,54 @@
+{
+    "slug": "svn-to-git-migration",
+    "title": "Software Repository Migration: SVN to Git",
+    "highlighted": false,
+    "description": "Led the migration of various software repositories from SVN (Subversion) to Git, enhancing collaboration, streamlining version control workflows, and ensuring better scalability for future development while maintaining data integrity.",    
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": ["Git", "SVN (Subversion)", "Version Control Systems", "Repository Management", "Migration Tools"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "The development teams were utilizing SVN (Subversion) for version control, which presented limitations in terms of collaboration capabilities, workflow efficiency, and scalability for a growing codebase. A strategic decision was made to transition to Git, a more modern and distributed version control system."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Migrate multiple software repositories from SVN (Subversion) to Git.",
+          "Improve overall version control efficiency, enhancing developer collaboration and streamlining workflows.",
+          "Ensure better scalability of the codebase and development environment to support future growth and feature integration.",
+          "Execute a smooth transition with minimal disruption to ongoing development activities and no data loss."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I led the end-to-end migration process from SVN to Git, which involved meticulous planning, execution, and post-migration support. This included researching and utilizing appropriate migration tools, configuring new Git repositories to align with team workflows, and providing necessary training and support to ensure a seamless transition for the development teams."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "Assessment and Planning: Conducted a thorough assessment of existing SVN repositories, including branching strategies, commit history, and integration points. Developed a detailed migration plan, outlining phases, tools, and rollback strategies.",
+          "Tool Selection & Setup: Researched and selected appropriate migration tools (`git-svn`) to facilitate the transfer of SVN history, branches, and tags to Git while preserving commit metadata.",
+          "Pilot Migration & Testing: Performed pilot migrations for smaller repositories to identify potential issues, refine the migration process, and validate data integrity and history preservation in Git.",
+          "Repository Conversion: Executed the conversion of SVN repositories to Git, carefully preserving commit history, author mapping, and branch/tag structures.",
+          "Git Repository Configuration: Configured the new Git repositories to match the team's desired branching models, access permissions, and integration with CI/CD pipelines.",
+          "Post-Migration Verification: Conducted extensive verification to ensure all data was accurately transferred and the new Git repositories were fully functional and ready for use.",
+          "Team Training & Support: Provided comprehensive training sessions and documentation to development teams on Git workflows, best practices, and the specifics of the new repository structure. Offered immediate support for any post-migration queries or issues.",
+          "Decommissioning SVN: Collaborated with relevant teams to safely decommission the old SVN repositories once the migration was complete and stable."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "Git, SVN (Subversion), Repository Migration, Version Control Best Practices, Change Management, Collaboration with Development Teams, Problem-Solving, Training and Support, Data Integrity, Scalability Planning."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Successful Data-Preserving Migration: Successfully migrated all targeted repositories to Git with no data loss, ensuring the complete preservation of commit history, branches, and tags.",
+          "Enhanced Scalability & Performance: Significantly enhanced the scalability of the codebase and development environment, enabling support for future growth, larger teams, and more complex feature integration.",
+          "Improved Collaboration & Efficiency: Facilitated improved collaboration among development teams and streamlined version control workflows, leading to increased developer productivity.",
+          "Seamless Transition: Achieved a smooth transition to Git, with minimal disruption to ongoing development efforts, leading to rapid user adoption and positive feedback from the teams."
+        ]
+      }
+    ]
+  }

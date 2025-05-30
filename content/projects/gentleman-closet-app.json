@@ -1,0 +1,44 @@
+{
+    "slug": "gentleman-closet-app",
+    "title": "Gentleman Closet: AI-Powered Smart Wardrobe Assistant",
+    "highlighted": false,
+    "description": "Developed 'Gentleman Closet,' a modern and intelligent personal wardrobe management mobile application built with Flutter. It helps users organize clothes, plan outfits, and receive AI-based suggestions tailored to style, weather, and occasion, featuring an offline-first design and planned LLM integration.",    
+    "liveUrl": null,
+    "githubUrl": "https://github.com/lorenzomaiuri-dev/gentleman-closet",
+    "technologies": ["Flutter", "Dart", "Mobile Development", "AI Integration (Gemini API)", "Local Database (Hive)", "State Management (Provider)", "UI/UX Design", "Offline-First Development"],
+    "sections": [
+      {
+        "title": "Overview",
+        "content": "'Gentleman Closet' is a sophisticated and intelligent mobile application designed to serve as a personal wardrobe assistant. Built with Flutter, it offers users a seamless way to organize their clothing, plan outfits, and receive personalized, AI-driven suggestions. With a minimalist and elegant UI, the app caters to fashion enthusiasts, minimalists, and anyone looking to optimize their wardrobe management. This project is available on GitHub."
+      },
+      {
+        "title": "Key Features",
+        "listItems": [
+          "Smart Wardrobe Organization: Users can effectively organize and filter their clothing items by various attributes such as material, color, season, category, and custom tags, providing a highly structured overview of their closet.",
+          "Add Clothes with AI (WIP): Plans to incorporate AI models to automatically suggest categories, materials, patterns, and colors upon uploading a garment photo, streamlining the onboarding process.",
+          "Outfit Creator (WIP): An intuitive drag & drop interface for assembling outfits. Users can save and schedule these curated looks for future events or daily wear.",
+          "Weather-Based Suggestions (WIP): A feature to provide daily outfit suggestions dynamically tailored to local weather conditions and the user's mood, ensuring practical and comfortable styling.",
+          "Offline-First Design: All user data is stored locally using Hive, a lightweight and fast database, ensuring the app is fully functional even without an internet connection and eliminating the need for a persistent backend.",
+          "LLM Integration (WIP): Future plans include integrating large language models (e.g., Google Gemini API) to power advanced AI suggestions for outfit planning, styling advice, and fashion insights."
+        ]
+      },
+      {
+        "title": "Technical Stack",
+        "content": "The 'Gentleman Closet' application is built on a modern and efficient tech stack:\n\nFramework: Flutter (Dart) for cross-platform mobile development, enabling a single codebase for iOS and Android.\nLocal Storage: Hive serves as the lightweight and fast local database, ensuring robust offline capabilities.\nState Management: Provider is used for efficient and scalable state management across the application.\nAI Integration (WIP): Google Gemini API is planned for integrating Large Language Model (LLM) capabilities for advanced AI-driven outfit suggestions and styling advice.\nDesign (WIP): The application features a clean, responsive, and pastel-based modern UI, focusing on user experience and aesthetic appeal."
+      },
+      {
+        "title": "Skills Used",
+        "content": "Flutter (Dart), Mobile Application Development, UI/UX Design, State Management (Provider), Local Database Management (Hive), AI Integration (Google Gemini API), Offline-First Development, Product Design, Project Management."
+      },
+      {
+        "title": "Outcomes & Future Vision",
+        "listItems": [
+          "Personalized Wardrobe Management: Provides users with a smart and stylish solution for organizing their closet and managing outfits effectively.",
+          "AI-Powered Styling: Aims to deliver intelligent, personalized outfit suggestions leveraging advanced AI and LLM technologies.",
+          "Enhanced User Experience: Designed with a minimalist and elegant UI, focusing on intuitive navigation and a seamless user experience.",
+          "Robust Offline Functionality: Ensures reliability and accessibility by storing all data locally, making the app usable even without an internet connection.",
+          "Showcase of Modern Mobile Development: Demonstrates proficiency in Flutter, cutting-edge AI integration, and robust mobile architecture for a practical and engaging consumer application."
+        ]
+      }
+    ]
+  }

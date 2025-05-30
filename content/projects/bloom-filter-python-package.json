@@ -1,0 +1,46 @@
+{
+    "slug": "bloom-filter-python-package",
+    "title": "Bloom Filter in Python (Python Package & Library)",
+    "highlighted": false,
+    "description": "Developed and optimized a Python implementation of a Bloom Filter, a space-efficient probabilistic data structure, configurable for expected elements and false positive rates. The project is available as a PyPI package and on GitHub, with detailed documentation covering theory, installation, usage, and benchmarks.",    
+    "liveUrl": "https://pypi.org/project/bloomfilter-lite/",
+    "githubUrl": "https://github.com/lorenzomaiuri-dev/bloomfilter-py",
+    "technologies": ["Python", "Data Structures", "Algorithms", "Probabilistic Algorithms", "Performance Optimization", "Packaging (PyPI)", "Unit Testing (Pytest)", "Benchmarking"],
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "A Bloom Filter is a highly space-efficient probabilistic data structure used to test for set membership. It is unique in that it allows for false positives (identifying an element as present when it's not) but never false negatives (never falsely identifying an element as absent). This characteristic makes it an ideal solution for applications where memory efficiency is paramount, such as caching systems, network routing, and database query optimization."
+      },
+      {
+        "title": "Project Overview",
+        "content": "This project delivers an optimized Bloom Filter implementation in Python, prioritizing configurability and performance. Users can easily specify the expected number of elements and the desired false positive probability, allowing the filter to be tailored to specific application requirements. The project includes comprehensive documentation, installation instructions, usage examples, and performance benchmarks, and it is available as a PyPI package and on GitHub."
+      },
+      {
+        "title": "Theory & Mathematical Foundations",
+        "content": "At its core, a Bloom Filter comprises a bit array of a specific size (m) and employs k distinct hash functions. When an element is added to the filter, each of the k hash functions computes an index within the bit array, and the corresponding bits at these indices are set to 1. To check for the presence of an element, its k hash values are re-computed. If all bits at the resulting positions are 1, the element 'may' be present (with a defined false positive probability). If even one bit is 0, the element is 'definitely not' present."
+      },
+      {
+        "title": "Installation & Usage",
+        "content": "The Bloom Filter package is readily available on PyPI, making installation straightforward"
+      },
+      {
+        "title": "Performance Benchmarks",
+        "content": "The implementation includes comprehensive benchmarks to demonstrate its efficiency across different dataset sizes. Key performance indicators such as memory usage, time per insert, and time per lookup have been rigorously tested"
+      },
+      {
+        "title": "Key Features & Outcomes",
+        "listItems": [
+          "Space-Efficient Implementation: Provides a highly optimized Bloom Filter for memory-critical applications.",
+          "Configurability: Allows users to define expected items and false positive rates, tailoring the filter precisely to their needs.",
+          "Performance Optimized: Demonstrated efficient insert and lookup times, crucial for high-throughput scenarios.",
+          "Easy Installation: Available as a `pip` installable package, simplifying setup for developers.",
+          "Comprehensive Documentation: Includes clear explanations of theory, usage, and benchmarks, facilitating adoption.",
+          "Testable & Reproducible: Comes with unit tests and benchmark scripts for verification and further development."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "Python Programming, Data Structures (Bloom Filter), Algorithms, Probabilistic Algorithms, Performance Optimization, Software Packaging (PyPI), Unit Testing (Pytest), Benchmarking, Version Control (Git)."
+      }
+    ]
+  }

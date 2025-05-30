@@ -1,0 +1,45 @@
+{
+    "slug": "codice-fiscale-dotnet-library",
+    "title": "CodiceFiscale: .NET Core Library for Italian Tax Code Calculation & Validation",
+    "highlighted": false,
+    "description": "Developed a .NET Core library, 'CodiceFiscale,' for calculating and validating the Italian Tax Code (Codice Fiscale). Available on NuGet and GitHub, it offers an easy-to-use interface for generating, decoding, and validating tax codes based on personal data.",    
+    "liveUrl": "https://www.nuget.org/packages/CodiceFiscale",
+    "githubUrl": "https://github.com/lorenzomaiuri-dev/CodiceFiscale",
+    "technologies": [".NET Core", "C#", "Library Development", "NuGet Packaging", "Data Validation", "Algorithm Implementation", "Italian Tax Code Logic"],
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "The 'Codice Fiscale' (Italian Tax Code) is a unique alphanumeric identifier assigned to individuals in Italy. Its generation and validation involve a complex set of rules based on personal data such as name, surname, date of birth, and place of birth. There was a need for a robust and easy-to-use library for .NET developers to handle this complexity within their applications."
+      },
+      {
+        "title": "Project Overview",
+        "content": "The 'CodiceFiscale' library is a .NET Core solution designed to simplify the process of generating and validating the Italian Tax Code. It provides a clean, programmatic interface for developers, abstracting away the intricate logic involved. The library is ideal for applications requiring tax code management, user registration, and integration with Italian government services. It is made publicly available on NuGet and GitHub, complete with documentation and usage examples."
+      },
+      {
+        "title": "Features & Functionality",
+        "listItems": [
+          "Generation (Encoding): Accurately calculates the Italian Tax Code based on provided personal details (surname, name, gender, date of birth, city of birth).",
+          "Validation: Verifies the structural and algorithmic correctness of an existing Italian Tax Code.",
+          "Decoding: Extracts personal information embedded within a valid Italian Tax Code, providing insights into the individual's data.",
+          "Configurability: Designed for ease of integration into any .NET Core application."
+        ]
+      },
+      {
+        "title": "Installation",
+        "content": "The 'CodiceFiscale' library can be easily installed via the NuGet Package Manager"
+      },
+      {
+        "title": "Skills Used",
+        "content": ".NET Core, C#, Library Development, NuGet Packaging, Data Validation, Algorithm Implementation, String Manipulation, Italian Tax Code Logic, Software Design Principles, Unit Testing (conceptual)."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Simplified Italian Tax Code Operations: Provided developers with an easy-to-use, reliable library for generating, validating, and decoding Italian Tax Codes, abstracting away complex logic.",
+          "Enhanced Application Development: Enabled efficient integration of Italian Tax Code functionality into diverse applications, including tax management, user registration, and government service platforms.",
+          "Improved Data Accuracy: Facilitated the correct calculation and validation of tax codes, reducing potential errors in data entry and processing.",
+          "Open Source Contribution: Contributed a valuable tool to the .NET ecosystem, available publicly on NuGet and GitHub, fostering community use and collaboration."
+        ]
+      }
+    ]
+  }

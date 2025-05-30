@@ -1,0 +1,50 @@
+{
+    "slug": "histopathologic-cancer-detection-cnn",
+    "title": "AI for Histopathologic Cancer Detection",
+    "highlighted": true,
+    "description": "Developed a deep learning CNN model for binary classification of metastatic tissue in histopathologic scans, enhancing potential for automated pre-screening in pathology.",
+    "image": "/images/projects/histopathologic-cancer-detection.jpeg",
+    "liveUrl": "https://huggingface.co/maiurilorenzo/histoplastic-cancer-CNN-classifier",
+    "githubUrl": "https://www.kaggle.com/code/lorenzomaiuri/cancer-image-detection-with-pytorch",
+    "technologies": ["Deep Learning", "CNN", "PyTorch", "Medical Imaging", "Hugging Face Transformers"],
+    "sections": [
+      {
+        "title": "Project Overview",
+        "content": "This project involved the development of a Convolutional Neural Network (CNN) model to automatically detect metastatic tissue in histopathologic scans of lymph node sections. The model analyzes small image patches and predicts the presence of tumor tissue in the central 32x32 pixel region."
+      },
+      {
+        "title": "Model Architecture",
+        "content": "The CNN architecture consists of four convolutional layers (each followed by ReLU activation and max pooling) and two fully connected layers with dropout regularization (0.25) to improve generalization. The final layer outputs log-probabilities using log softmax activation."
+      },
+      {
+        "title": "Training and Optimization",
+        "content": "The model was trained using the PatchCamelyon (PCam) dataset. The training process utilized the Adam optimizer and Negative Log-Likelihood Loss (NLLLoss). Callbacks such as Early Stopping and ReduceLROnPlateau were implemented. Key training hyperparameters included a batch size of 32 and 50 epochs."
+      },
+      {
+        "title": "Key Technologies",
+        "listItems": [
+          "Deep Learning (Convolutional Neural Networks - CNNs)",
+          "PyTorch framework for model development and training",
+          "PatchCamelyon (PCam) dataset for histopathologic image analysis",
+          "Hugging Face Model Repository for model sharing",
+          "Data augmentation techniques (random flips, rotations) for improved generalization"
+        ]
+      },
+      {
+        "title": "Potential Applications",
+        "listItems": [
+          "Research and Development in digital pathology and AI-driven diagnostics.",
+          "Educational tool for demonstrating deep learning in medical imaging.",
+          "Potential for use as a pre-screening tool in research settings to flag regions of interest for pathologists (not for clinical diagnosis)."
+        ]
+      },
+      {
+        "title": "Important Considerations",
+        "content": "It is crucial to note that this model is intended for research and educational purposes and is not validated for direct clinical diagnosis. Its performance may vary on datasets different from PCam, and careful consideration of potential biases and limitations is necessary. Human oversight and further validation are essential for any potential clinical applications."
+      },
+      {
+        "title": "Results and Future Work",
+        "content": "The trained model demonstrated strong classification performance on the test set (90% precison). Future work could focus on improving recall (reducing false negatives), incorporating more diverse datasets, and further validation in specific research contexts."
+      }
+    ]
+  }

@@ -1,0 +1,58 @@
+{
+    "slug": "apache-airflow-migration",
+    "title": "Migration to Apache Airflow for Workflow Orchestration",
+    "highlighted": true,
+    "description": "Led the migration from a custom middleware to Apache Airflow, resolving performance bottlenecks, optimizing workflows, and enhancing system reliability and scalability.",
+    "image": "/images/projects/apache-airflow-migration.jpeg",
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": [
+        "Apache Airflow",
+        "Python",
+        "Redis",
+        "Workflow Orchestration",
+        "Middleware",
+        "ETL"
+    ],
+    "sections": [
+        {
+            "title": "Context",
+            "content": "The company was using a custom-built middleware solution to orchestrate its workflows, which had frequent performance issues and limited the scalability of the system."
+        },
+        {
+            "title": "Project Objectives",
+            "listItems": [
+                "Replace the custom middleware solution with Apache Airflow to improve system performance and reliability.",
+                "Optimize existing workflows and eliminate recurring performance issues.",
+                "Leverage Airflow's robust scheduling and monitoring capabilities."
+            ]
+        },
+        {
+            "title": "Implemented Solution",
+            "content": "I led the full migration to the Apache Airflow platform, redesigning workflows and optimizing code to take full advantage of its orchestration capabilities."
+        },
+        {
+            "title": "Key Steps",
+            "listItems": [
+                "In-depth analysis of existing middleware architecture and identification of bottlenecks.",
+                "Design and implementation of new workflows in Apache Airflow.",
+                "Optimization of code and configurations to improve performance and efficiency. ",
+                "Implementation of advanced scheduling and monitoring mechanisms using Airflow features.",
+                "Extensive testing to ensure smooth transition and stability of the new system.",
+                "Creation of detailed documentation for management and maintenance of the new infrastructure."
+            ]
+        },
+        {
+            "title": "Skills Used",
+            "content": "Apache Airflow implementation, workflow orchestration, performance optimization, debugging, strategic planning, problem solving."
+        },
+        {
+            "title": "Outcomes",
+            "listItems": [
+                "100% reduction in middleware-related performance issues.",
+                "Improved system scalability and reliability, ensuring smoother operations.",
+                "Simplified maintenance processes, with a 90% reduction in manual interventions."
+            ]
+        }
+    ]
+}

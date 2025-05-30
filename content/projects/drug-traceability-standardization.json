@@ -1,0 +1,56 @@
+{
+    "slug": "drug-traceability-standardization",
+    "title": "Drug Traceability Process Standardization",
+    "highlighted": false,
+    "description": "Designed and implemented a comprehensive solution to standardize drug traceability workflows, creating an intuitive application for managing transmission history to the Italian Ministry of Health, tracking rejected submissions, and streamlining recovery operations.",
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": ["Node.js", "Express.js", "React", "PostgreSQL", "XML", "Docker", "API Integration", "UI/UX Design"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "A pharmaceutical organization required a standardized and efficient system to manage drug traceability data and transmissions to the Italian Ministry of Health, facing challenges with manual tracking, error handling, and compliance."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Standardize the drug traceability process to ensure full compliance with Italian Ministry of Health regulations.",
+          "Develop a user-friendly application with a graphical interface for managing the history of data transmissions.",
+          "Implement robust functionalities to track and efficiently handle rejected submissions.",
+          "Streamline recovery operations for rejected data to minimize manual intervention and errors."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I designed and implemented a full-stack application to centralize and automate drug traceability workflows. The solution included an intuitive front-end for user interaction, a robust backend for data processing and API communication, and a database for secure data storage. The application was containerized using Docker for simplified deployment and scalability."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "Requirement Gathering & Analysis: Collaborated with stakeholders to understand existing traceability workflows, compliance requirements, and pain points related to manual tracking and rejected submissions.",
+          "System Architecture Design: Designed the overall architecture, defining the interaction between the React frontend, Node.js/Express.js backend, PostgreSQL database, and external XML-based APIs for Ministry of Health transmissions.",
+          "Database Design & Implementation: Developed a PostgreSQL database schema to store transmission history, rejected records, and associated metadata, ensuring data integrity and efficient retrieval.",
+          "Backend Development (Node.js/Express.js): Built a RESTful API to manage data, process incoming and outgoing traceability information, handle XML data parsing for Ministry submissions, and integrate with external systems.",
+          "Frontend Development (React): Developed an intuitive and responsive graphical user interface (GUI) allowing users to easily view transmission history, filter rejected records, and initiate recovery operations.",
+          "Error Handling & Recovery Logic: Implemented sophisticated logic within the application to automatically track rejected submissions, provide clear reasons for rejection, and guide users through streamlined recovery processes.",
+          "XML Data Processing: Developed modules for generating and parsing XML files compliant with the Italian Ministry of Health's specifications for data exchange.",
+          "Docker Containerization: Containerized the entire application stack (frontend, backend, database) using Docker, ensuring consistent development and production environments and simplifying deployment.",
+          "Testing & Validation: Conducted thorough testing, including unit, integration, and user acceptance testing, to ensure the application's functionality, accuracy, and compliance."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "Full-stack Development (Node.js, Express.js, React), PostgreSQL, XML Processing, API Development, UI/UX Design, Docker, Data Tracking and Reporting, Compliance Workflows, Requirement Gathering, End-to-End Solution Design, Problem Solving."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Enhanced Compliance & Standardization: Successfully standardized the drug traceability process, ensuring adherence to Italian Ministry regulations and reducing compliance risks.",
+          "Significant Reduction in Resolution Time: Improved the efficiency of handling rejected records, reducing resolution time by 80% through automated tracking and streamlined recovery operations.",
+          "Decreased Manual Tracking Errors: Delivered an application that reduced manual tracking errors by 50%, leading to more accurate data and fewer discrepancies.",
+          "Improved Operational Efficiency: Provided a user-friendly interface that empowered users to manage transmissions and rejections independently, significantly improving overall operational efficiency.",
+          "Scalable & Maintainable Solution: The Dockerized architecture provided a robust, scalable, and easily maintainable solution for future enhancements and evolving regulatory requirements."
+        ]
+      }
+    ]
+  }

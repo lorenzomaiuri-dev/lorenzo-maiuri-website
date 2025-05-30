@@ -1,0 +1,54 @@
+{
+    "slug": "generic-data-reporter",
+    "title": "Generic Data Reporter for Automated Reporting & Distribution",
+    "highlighted": false,
+    "description": "Researched and developed a generic Python-based data reporter script to automate the generation and multi-format distribution (Excel, JSON, CSV) of reports from any database, deliverable via email, FTP, or SFTP, with flexible INI file configuration for easy scheduling and adaptation.",    
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": ["Python", "SQL (Generic)", "Database API Wrappers", "Excel Libraries", "JSON", "CSV", "FTP/SFTP Libraries", "Email Automation Libraries", "INI File Parsing"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "Organizations often face a recurring need for customized data reports from various databases, delivered in specific formats and through different channels. Manual report generation is time-consuming, prone to errors, and lacks scalability. There was a need for a flexible, automated solution to streamline this process."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Research and develop a generic data reporter script capable of extracting data from any database using SQL queries.",
+          "Enable the generation of reports in multiple formats, including Excel, JSON, and CSV.",
+          "Implement flexible distribution channels, allowing reports to be delivered via email, FTP, or SFTP.",
+          "Design the tool to be highly configurable via an INI file, empowering users to easily adjust parameters and schedule reports without requiring code changes or additional development."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I researched and developed a pure Python-based solution that acts as a generic data reporter. The script incorporates a flexible database wrapper to connect to various SQL databases, utilizes dedicated libraries for generating different output formats, and integrates with FTP/SFTP and email protocols for diverse distribution needs. Its key strength lies in its INI-file driven configuration, making it incredibly adaptable and user-friendly for scheduling and customization."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "Core Script Development (Python): Developed the central Python script to manage the entire reporting workflow, from data extraction to formatting and distribution.",
+          "Generic Database Wrapper: Implemented a generic database connection and query execution wrapper in Python, allowing the script to connect to various SQL databases (PostgreSQL, SQL Server, MySQL, Oracle) using their respective Python drivers.",
+          "Report Format Generation: Integrated Python libraries (`openpyxl` for Excel, `json` for JSON, `csv` for CSV) to enable the generation of reports in the specified output formats based on query results.",
+          "Distribution Channel Integration: Incorporated Python libraries for email automation (`smtplib`), FTP (`ftplib`), and SFTP (`paramiko`) to support multiple delivery methods.",
+          "INI File Configuration Module: Designed and implemented a robust INI file parsing module (using `configparser`) to allow users to define database connections, SQL queries, output formats, distribution channels, and scheduling parameters dynamically without modifying the code.",
+          "Error Handling & Logging: Implemented comprehensive error handling and logging mechanisms to ensure robustness and facilitate troubleshooting for various reporting tasks.",
+          "Scheduling Integration (Conceptual/External): Designed the script to be easily integrated with external scheduling tools (cron jobs on Linux, Task Scheduler on Windows) by allowing all necessary parameters to be passed via the INI file.",
+          "Testing & Validation: Conducted extensive testing to ensure the script's flexibility across different database types, report formats, and distribution channels, validating its reliability and configurability."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "Python Programming, SQL (Generic Querying), Database Connectivity (Various RDBMs), Data Automation, Report Generation, FTP/SFTP Integration, Email Automation, INI File Parsing, Scripting, Libraries Integration, Problem Solving, Flexible Design."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Enhanced Reporting Flexibility: Delivered a highly flexible tool that significantly improved report generation and distribution capabilities, supporting a wide range of use cases and data sources across the business.",
+          "Streamlined Scheduling & Automation: Streamlined the report scheduling process, enabling reports to be generated and sent automatically at specified intervals without manual intervention, saving considerable time and resources.",
+          "Reduced Development Overhead: The INI-file based configuration eliminated the need for additional development for new report requirements, empowering business users and analysts to self-serve their reporting needs.",
+          "Improved Data Accessibility: Facilitated easier and more consistent access to critical business data by automating its delivery in user-preferred formats."
+        ]
+      }
+    ]
+  }

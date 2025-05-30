@@ -1,0 +1,55 @@
+{
+    "slug": "it-asset-management-system",
+    "title": "IT Asset Management System",
+    "highlighted": true,
+    "description": "Developed a centralized IT asset management system for tracking lifecycle, assignment, and status of hardware, improving visibility and resource allocation.",
+    "image": "/images/projects/it-asset-management.jpeg",
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": ["System Development", "Database Design", "UI/UX Design", "PostgreSQL", "React", "Javascript", ".NET Core", "C#", "Docker"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "The organization lacked a centralized and efficient system for managing its growing inventory of IT assets, leading to difficulties in tracking, assigning, and monitoring their lifecycle and status."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Develop a comprehensive system for managing all IT assets, including devices like laptops, phones, and peripherals.",
+          "Create a centralized solution for tracking the registration, assignment, and status of each asset.",
+          "Implement functionality for reporting and inventory management to streamline asset management processes.",
+          "Improve overall resource allocation and provide better visibility into the company's IT asset inventory."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I developed an IT asset management system designed to track the complete lifecycle of all IT assets within the organization. The system enabled the registration of new assets, their assignment to employees or departments, and continuous monitoring of their status and location."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "Centralized asset repository to store detailed information about each IT asset.",
+          "Functionality for registering new assets with relevant details (serial number, purchase date, specifications, etc.).",
+          "System for assigning assets to users or departments and tracking their current location.",
+          "Status monitoring capabilities to track the operational status and lifecycle stage of each asset.",
+          "Reporting features to generate inventory reports, asset status summaries, and allocation overviews.",
+          "User-friendly interface (UI) and optimized user experience (UX) for easy asset management.",
+          "Database design to efficiently store and retrieve asset information.",
+          "Potentially included features for asset maintenance scheduling, warranty tracking, and disposal management (depending on requirements)."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "System development, database design, inventory management principles, UI/UX design, collaboration with cross-functional teams, requirement gathering, problem-solving."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Created a centralized asset repository that significantly improved visibility and tracking of over 1000 IT assets.",
+          "Enhanced reporting capabilities, allowing for real-time monitoring of asset status and more efficient resource allocation.",
+          "Streamlined IT asset management processes, reducing the time and effort required for inventory management and tracking.",
+          "Improved accountability and reduced potential loss or misplacement of valuable IT equipment."
+        ]
+      }
+    ]
+  }

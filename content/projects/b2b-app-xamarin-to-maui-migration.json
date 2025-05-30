@@ -1,0 +1,54 @@
+{
+    "slug": "b2b-app-xamarin-to-maui-migration",
+    "title": "B2B App Migration: Xamarin.Forms to .NET MAUI",
+    "highlighted": false,
+    "description": "Led the critical migration of the company's B2B application from Xamarin.Forms to .NET MAUI, ensuring continued functionality, significant performance improvements, and enhanced future compatibility with minimal downtime.",    
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": [".NET MAUI", "Xamarin.Forms", "C#", ".NET", "Mobile Development", "Cross-Platform Development", "Performance Optimization", "UI/UX Migration"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "The company's mission-critical B2B application, built on Xamarin.Forms, was approaching limitations in terms of future support, performance, and compatibility with evolving mobile ecosystems. A strategic decision was made to migrate to .NET MAUI, a more modern and officially supported cross-platform framework, to ensure the app's longevity and enhance its capabilities."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Upgrade the company's B2B application by migrating its codebase from Xamarin.Forms to .NET MAUI.",
+          "Ensure the app's future scalability, performance improvements, and long-term supportability on modern mobile platforms.",
+          "Execute a seamless migration process with minimal disruption to business operations and without app downtime.",
+          "Maintain all existing key functionalities while enhancing the overall performance and responsiveness of the application."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I spearheaded the complex migration of the B2B app from Xamarin.Forms to .NET MAUI. This involved a meticulous approach to code refactoring, UI adaptation, performance optimization, and rigorous testing, all while maintaining crucial functionalities and ensuring a smooth, undisrupted transition for end-users."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "Pre-Migration Assessment & Planning: Conducted a detailed analysis of the existing Xamarin.Forms codebase, identifying areas for refactoring, potential migration challenges, and planning the migration roadmap to minimize impact on ongoing development.",
+          "Environment Setup & Configuration: Set up the .NET MAUI development environment, configuring project files and dependencies to align with the new framework's structure.",
+          "Codebase Migration & Refactoring: Systematically migrated the Xamarin.Forms code to .NET MAUI, involving refactoring UI elements, platform-specific code, and shared logic to align with MAUI's architecture. This included adapting XAML, handlers, and renderers.",
+          "Dependency Updates & Compatibility: Updated and ensured compatibility of all third-party libraries and NuGet packages with the .NET MAUI framework.",
+          "Performance Optimization: Implemented performance enhancements during the migration, leveraging .NET MAUI's improved rendering engine and performance features to optimize app startup time, UI responsiveness, and resource consumption.",
+          "Thorough Testing: Conducted extensive testing across various devices and platforms (iOS, Android) to ensure all functionalities remained intact, performance improvements were realized, and no regressions were introduced.",
+          "UI/UX Adaptation: Ensured the user interface and user experience remained consistent or improved, adapting UI components where necessary to leverage MAUI's capabilities while maintaining the app's established look and feel.",
+          "Deployment & Post-Migration Monitoring: Managed the deployment of the migrated app and closely monitored its performance and stability in the production environment, addressing any emergent issues promptly."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": ".NET MAUI, Xamarin.Forms, C#, Mobile Development, Cross-Platform Development, Mobile App Optimization, Troubleshooting, Code Refactoring, UI/UX Migration, Performance Tuning, Risk Management, Cross-functional Collaboration, Stakeholder Communication, Project Management."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Enhanced Future Scalability & Support: Successfully positioned the B2B app for future scalability and long-term support, significantly reducing anticipated future upgrade and maintenance efforts.",
+          "Significant Performance Improvement: Improved app performance and responsiveness by 25% with the adoption of the new .NET MAUI framework, leading to a smoother and more efficient user experience.",
+          "Seamless Transition: Achieved a seamless migration with no critical downtime, ensuring continuous functionality for business operations.",
+          "Maintained Core Functionality: All key functionalities of the B2B app were fully preserved and enhanced, leading to positive user feedback post-migration."
+        ]
+      }
+    ]
+  }

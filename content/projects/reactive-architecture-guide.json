@@ -1,0 +1,47 @@
+{
+    "slug": "reactive-architecture-guide",
+    "title": "Reactive Architecture: Principles & Patterns for Building Reactive Systems",
+    "highlighted": false,
+    "description": "A comprehensive guide on building Reactive Systems using Reactive Architecture principles. This GitHub repository provides an in-depth resource covering topics such as Reactive Microservices, Distributed Messaging, and CQRS & Event Sourcing, emphasizing responsive, resilient, and elastic system design.",    
+    "liveUrl": null,
+    "githubUrl": "https://github.com/lorenzomaiuri-dev/Reactive-Architecture",
+    "technologies": ["Reactive Systems", "Reactive Architecture", "Distributed Systems", "Microservices", "CQRS", "Event Sourcing", "Domain-Driven Design", "Message Queues", "System Design"],
+    "sections": [
+      {
+        "title": "Introduction",
+        "content": "In today's interconnected world, building systems that are responsive, resilient, and elastic is crucial. Reactive Architecture provides a set of principles and patterns to achieve these qualities. This project serves as a comprehensive guide, available on GitHub, to help developers and architects understand and implement Reactive Systems effectively."
+      },
+      {
+        "title": "Project Scope & Purpose",
+        "content": "This repository is dedicated to exploring the fundamental concepts and practical applications of Reactive Architecture. It aims to provide an in-depth resource for designing and implementing systems that can handle varying loads, remain responsive under stress, and recover gracefully from failures. The guide breaks down complex topics into digestible 'Units' to facilitate a structured learning experience."
+      },
+      {
+        "title": "Key Topics Covered (Units)",
+        "listItems": [
+          "Introduction to Reactive Systems: Lays the groundwork by defining what Reactive Systems are and why they are essential in modern software development.",
+          "Domain-Driven Design (DDD): Explores how DDD principles can be applied within a Reactive context to build robust and scalable domain models.",
+          "Reactive Microservices: Details the design and implementation of microservices that adhere to Reactive principles, emphasizing isolation, resilience, and communication.",
+          "Building Scalable Systems: Covers strategies and patterns for achieving horizontal and vertical scalability in Reactive applications.",
+          "Distributed Messaging Platforms: Discusses the role and implementation of messaging systems (e.g., Kafka, RabbitMQ) as a cornerstone of Reactive communication.",
+          "CQRS & Event Sourcing: Delves into Command Query Responsibility Segregation (CQRS) and Event Sourcing as powerful patterns for managing data consistency and auditing in distributed Reactive Systems."
+        ]
+      },
+      {
+        "title": "Principles & Inspirations",
+        "content": "The guide draws heavily from established industry best practices and influential projects:\n\nReactive Manifesto: The core principles outlined in the Reactive Manifesto—Responsive, Resilient, Elastic, and Message-Driven—form the backbone of the architecture discussed.\nAkka: Inspiration is taken from Akka's actor-based concurrency model, showcasing an effective approach to building resilient and message-driven components.\nMartin Fowler's Work on Microservices: Acknowledges the foundational insights provided by Martin Fowler regarding the design and implementation of microservices architectures."
+      },
+      {
+        "title": "Skills Demonstrated",
+        "content": "System Design, Reactive Architecture Principles, Distributed Systems, Microservices Architecture, Domain-Driven Design (DDD), CQRS (Command Query Responsibility Segregation), Event Sourcing, Message Queueing, Scalability, Resilience, System Responsiveness, Documentation, Technical Writing."
+      },
+      {
+        "title": "Outcomes & Value",
+        "listItems": [
+          "Comprehensive Knowledge Resource: Provides a structured and in-depth guide for understanding and applying Reactive Architecture principles.",
+          "Improved System Design: Enables the design and implementation of systems that are inherently more responsive, resilient, and elastic, crucial for demanding modern applications.",
+          "Enhanced Scalability & Maintainability: Guides developers in building scalable and maintainable distributed systems, ready for future growth and evolving requirements.",
+          "Community Contribution: Offers a valuable open-source resource on GitHub, fostering best practices in Reactive System design for the broader development community."
+        ]
+      }
+    ]
+  }

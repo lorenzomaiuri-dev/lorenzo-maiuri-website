@@ -1,0 +1,55 @@
+{
+    "slug": "internal-b2b-system-migration",
+    "title": "Internal B2B System Migration & Sales Workflow Redesign",
+    "highlighted": false,
+    "description": "Collaborated with colleagues to successfully migrate a legacy internal B2B system (JSP/Oracle) to a modern ASP.NET MVC and PostgreSQL-based platform, redefining up- and cross-selling workflows through data-driven strategies and providing comprehensive user support.",    
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": ["ASP.NET MVC", "C#", "Bootstrap", "PostgreSQL", "Python (ETL)", "JSP", "Oracle (Legacy)", "SQL", "Data Migration", "Workflow Redesign", "UI/UX Improvement"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "The company relied on an outdated internal B2B system built on JSP and Oracle, which was limiting its sales capabilities and operational efficiency, particularly in up-selling and cross-selling. A modernization initiative was launched to migrate to a more robust and flexible platform."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Migrate the existing legacy internal B2B system (JSP/Oracle) to a modern, scalable platform using ASP.NET MVC, Bootstrap, and PostgreSQL.",
+          "Redefine and optimize the up-selling and cross-selling workflows to leverage data-driven strategies and enhance sales performance.",
+          "Ensure a smooth transition for internal users with minimal disruption to business operations.",
+          "Provide extensive testing, user training, and post-migration support to facilitate user adoption and system stability."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I played a key role in the migration of the internal B2B system, transitioning from a JSP and Oracle stack to a modern ASP.NET MVC application with a PostgreSQL database, enhanced by a Bootstrap-based UI. This involved not only technical migration but also a significant re-engineering of sales-related workflows, supported by customized Python ETL processes for data transfer and transformation."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "System Analysis & Planning: Conducted a thorough analysis of the existing JSP/Oracle system, identifying critical functionalities, data structures, and integration points relevant to the migration.",
+          "Database Migration: Performed the migration of data from the Oracle database to PostgreSQL, ensuring data integrity and optimizing the new schema for the modern application. Modified existing (or created new) Python ETL scripts to handle data extraction, transformation, and loading between the disparate database systems.",
+          "Application Re-development: Collaborated with the development team on the re-development of the B2B system using ASP.NET MVC and C#, incorporating a modern, responsive user interface with Bootstrap.",
+          "Workflow Redesign (Up- and Cross-selling): Actively participated in redesigning and implementing the up-selling and cross-selling workflows, leveraging data analytics and user behavior patterns to build more effective sales strategies within the new platform.",
+          "Integration & API Development: Ensured seamless integration with other internal systems, developing or adapting APIs as necessary to maintain data flow and business processes.",
+          "Comprehensive Testing: Conducted rigorous testing, including functional, integration, performance, and user acceptance testing, to identify and resolve issues before and after the migration.",
+          "User Training & Documentation: Developed training materials and conducted workshops for internal users, focusing on the new system's features and optimized sales workflows. Provided comprehensive documentation for ongoing support.",
+          "Post-Migration Support: Offered crucial post-migration support, troubleshooting issues, gathering user feedback, and implementing immediate improvements to ensure system stability and user satisfaction."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "System Migration, ASP.NET MVC, C#, Bootstrap, PostgreSQL, Python (ETL), JSP (Legacy Understanding), Oracle (Legacy Understanding), SQL, Data Analysis, Workflow Redesign, UI/UX Improvement, Integration Testing, User Training, Post-Migration Support, Team Collaboration, Process Innovation, User Adoption Strategies."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Successfully Delivered Modern B2B System: Successfully delivered a fully operational and modernized B2B system, transitioning from an outdated legacy platform to a more agile and efficient solution.",
+          "Reduced Operational Inefficiencies: Achieved significant reduction in operational inefficiencies by streamlining key workflows and automating manual processes, leading to smoother business operations.",
+          "Enhanced Sales Capabilities: Redesigned up- and cross-selling workflows, leveraging data-driven insights to enhance the platform's sales capabilities and potentially increase revenue opportunities.",
+          "Improved System Usability & User Satisfaction: The new system offered enhanced usability, leading to positive feedback and increased adoption from internal users, signifying a successful transition.",
+          "Optimized Data Flow: Ensured robust and efficient data flow through custom ETL processes, maintaining data consistency and availability across the new system."
+        ]
+      }
+    ]
+  }

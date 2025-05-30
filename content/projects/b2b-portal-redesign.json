@@ -1,0 +1,56 @@
+{
+  "slug": "b2b-portal-redesign",
+  "title": "B2B Portal Redesign & Functionality Integration",
+  "highlighted": true,
+  "description": "Led the redesign of a B2B portal's landing page, integrating essential functionalities like invoice and delivery notes viewing, robust analytics, and a headless CMS, significantly enhancing user experience and operational efficiency.",
+  "image": "/images/projects/b2b-portal-redesign.jpeg",
+  "liveUrl": null,
+  "githubUrl": null,
+  "technologies": ["JavaScript", "C#", ".NET", "React", "API Integration", "UX Design", "Google Analytics", "Strapi (Headless CMS)", "Docker", "Nginx", "PostgreSQL"],
+  "sections": [
+    {
+      "title": "Context",
+      "content": "A B2B company with an existing customer portal faced challenges with an outdated user interface and a lack of direct access to crucial business information, impacting user experience and internal efficiency."
+    },
+    {
+      "title": "Project Objectives",
+      "listItems": [
+        "Redesign the B2B portal's landing page to significantly enhance usability and visual appeal.",
+        "Integrate critical functionalities, including direct viewing of invoices and delivery notes, to improve platform utility and customer self-service.",
+        "Implement a robust analytics system (Google Analytics) to track user behavior and identify key areas for continuous improvement.",
+        "Integrate a headless CMS (Strapi) for flexible and dynamic management of advertising and marketing content.",
+        "Ensure the solution is scalable and maintainable using modern infrastructure tools."
+      ]
+    },
+    {
+      "title": "Implemented Solution",
+      "content": "I led the comprehensive redesign of the B2B portal's landing page, collaborating closely with design teams to achieve an intuitive and visually engaging interface. Beyond the aesthetic overhaul, the project focused on integrating powerful new features and a flexible content management system, supported by a modern and efficient software infrastructure."
+    },
+    {
+      "title": "Key Steps",
+      "listItems": [
+        "Collaborative UI/UX Design: Worked with designers to create wireframes and mock-ups, prioritizing a user-centric experience for the new landing page.",
+        "Core Functionality Development Developed and integrated API-driven functionalities for direct viewing of invoices and delivery notes, providing users immediate access to critical business documents.",
+        "Analytics Integration: Implemented Google Analytics to provide deep insights into portal usage, user flows, and engagement patterns, enabling data-driven optimization.",
+        "Headless CMS Integration: Configured and integrated Strapi (Headless CMS) for seamless management of dynamic content (banners, ads, guides), empowering marketing teams with autonomy.",
+        "Infrastructure Modernization: Leveraged Docker for containerization of services, ensuring consistent environments and simplified deployment. Utilized Nginx for efficient content delivery and reverse proxy capabilities, particularly for the CMS.",
+        "Database Integration: Ensured robust integration with backend databases (Postgresql) for reliable data access.",
+        "Rigorous Testing: Conducted extensive testing to guarantee functionality, usability, and cross-browser compatibility of all new features and the redesigned interface."
+      ]
+    },
+    {
+      "title": "Skills Used",
+      "content": "Full-stack Web Development (JavaScript, C#, .NET, React), API Integration, User Experience (UX) Design, Google Analytics Implementation, Headless CMS (Strapi) Integration, Docker, Nginx, Database Design (Postgresql), Cross-functional Collaboration, Project Management, User-Centered Design Thinking, Problem Solving."
+    },
+    {
+      "title": "Outcomes",
+      "listItems": [
+        "Significantly Enhanced User Experience: The redesign, combined with direct access to invoices and delivery notes, dramatically improved user satisfaction and streamlined customer self-service, leading to 25% higher retention rates in the B2B portal.",
+        "Improved Operational Efficiency: Automated access to documents (invoices and delivery notes) reduced the workload of the customer service team by approximately 30%, as fewer manual requests for documentation were received.",
+        "Data-Driven Decision Making: Real-time portal usage data from Google Analytics provided actionable insights, allowing for continuous optimization of content and features based on user behavior.",
+        "Empowered Marketing Team: The integrated headless CMS (Strapi) enabled the marketing team to independently update and deploy dynamic content, reducing content update cycles by 50% and improving agility.",
+        "Robust & Scalable Infrastructure: The use of Docker and Nginx provided a more resilient, scalable, and easily maintainable platform, preparing the portal for future growth and new features."
+      ]
+    }
+  ]
+}

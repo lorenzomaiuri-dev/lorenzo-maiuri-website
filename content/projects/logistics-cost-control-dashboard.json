@@ -1,0 +1,50 @@
+{
+    "slug": "logistics-cost-control-dashboard",
+    "title": "Logistics Cost Control Dashboard with Anomaly Detection",
+    "highlighted": true,
+    "description": "Developed a dashboard to process courier invoices, cross-reference with shipment data, and detect anomalies, providing actionable insights for logistics cost optimization and accurate billing.",
+    "image": "/images/projects/logistics-cost-dashboard.jpeg",
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": ["Data Integration", "Dashboard Development", "Anomaly Detection", "Data Visualization", "Python", "Pandas", "PostgreSQL", "PowerBi"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "The company faced challenges in accurately controlling logistics costs due to discrepancies between courier invoices and actual shipment details, leading to potential overpayments and inefficient budget forecasting."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Build a comprehensive dashboard to monitor and analyze logistics costs by processing invoices from courier companies.",
+          "Implement a system to cross-reference invoice data with shipment details to identify anomalies and billing errors.",
+          "Provide actionable insights and visualizations to improve cost efficiency and ensure accurate billing practices."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I developed a logistics cost control dashboard that automates the processing of courier invoices and compares them against shipment data. The core of the system includes anomaly detection algorithms to highlight discrepancies between invoiced amounts and actual shipping information."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "Automated data integration pipelines to ingest invoice data from courier companies and shipment data from internal systems.",
+          "Development of anomaly detection algorithms to identify inconsistencies in billing amounts, shipping weights, dimensions, or other relevant parameters.",
+          "Interactive dashboard with visualizations to display key logistics cost metrics, identified anomalies, and trends over time.",
+          "User-friendly interface allowing logistics and finance teams to investigate and resolve discrepancies efficiently.",
+          "Customizable reporting features to generate insights on cost savings and areas for optimization."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "Data integration, dashboard development, anomaly detection algorithms, data visualization, analytical thinking, problem-solving, collaboration with logistics and finance teams."
+      },
+      {
+        "title": "Business Outcomes",
+        "listItems": [
+          "Significantly reduced discrepancies between invoiced and actual shipping costs through the implementation of effective anomaly detection.",
+          "Improved cost visibility across logistics operations, enabling more accurate budget forecasting and financial planning.",
+          "Streamlined the invoice verification process, reducing the time spent on manual checking by an estimated 70%, freeing up valuable resources."
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,56 @@
+{
+  "slug": "data-warehouse-modernization",
+  "title": "Data Warehouse Modernization: Oracle to PostgreSQL Migration & Orchestration",
+  "highlighted": true,
+  "description": "Led the migration and modernization of a data warehouse from Oracle to PostgreSQL, including improved ETL orchestration, CI/CD pipelines, and infrastructure enhancements, achieving a 100% cost reduction and 20% performance boost.",
+  "image": "/images/projects/data-warehouse-modernization.jpeg",
+  "liveUrl": null,
+  "githubUrl": null,
+  "technologies": ["PostgreSQL", "Oracle", "Python", "ETL", "Data Migration", "SQL", "CI/CD", "Software Infrastructure"],
+  "sections": [
+    {
+      "title": "Context",
+      "content": "A company was facing high costs and suboptimal performance with its Oracle-based data warehousing infrastructure. Data layer management using Python scripts was complex and lacked automation and robustness"
+    },
+    {
+      "title": "Project Objectives",
+      "listItems": [
+        "Fully migrate the enterprise data warehouse (DWH) from Oracle to PostgreSQL to improve performance, scalability and cost efficiency.",
+        "Optimize and modernize the existing data layer, previously managed with Python scripts.",
+        "Implement a more efficient orchestration system for ETL processes.",
+        "Introduce Continuous Integration/Continuous Deployment (CI/CD) practices for data layer management.",
+        "Improve the overall software infrastructure supporting the data warehouse."
+      ]
+    },
+    {
+      "title": "Implemented Solution",
+      "content": "I led a comprehensive data warehouse modernization initiative, addressing both database migration and improvement of the data layer and surrounding software infrastructure. Key activities included:"
+    },
+    {
+      "title": "Key Steps",
+      "listItems": [
+        "Database migration from Oracle to PostgreSQL, optimizing data structures for the new environment.",
+        "Review and optimization of existing Python scripts for data layer management.",
+        "Implementation of an orchestration system (Apache Airflow) to automate and monitor ETL workflows.",
+        "Creation of CI/CD pipelines to automate testing and deployment of changes to the data layer and ETL processes.",
+        "Improving software infrastructure, including adoption of version control practices (Git) and standardization of development and production environments.",
+        "Immproving query performacnes by leveraging indexes and partitioning large tables",
+        "Ensuring data integrity and business continuity throughout the transition process, coordinating closely with stakeholders."
+      ]
+    },
+    {
+      "title": "Skills Used",
+      "content": "Data migration, PostgreSQL optimization, ETL redesign and orchestration, Python development, CI/CD implementation, software infrastructure improvement, version control (Git), stakeholder management, problem-solving, strategic planning."
+    },
+    {
+      "title": "Outcomes",
+      "listItems": [
+        "DWH migration successfully completed, with a 100% reduction in database-related costs.",
+        "Improved ETL and query processing speed by 20%, enabling faster data availability for reporting.",
+        "Modernization of the data layer with an efficient and automated orchestration system.",
+        "Introduction of CI/CD practices that improved stability, reliability, and speed of deployment of changes to the data warehouse.",
+        "Provision of a more robust, scalable and easy-to-maintain software infrastructure to support future data analysis needs."
+      ]
+    }
+  ]
+}

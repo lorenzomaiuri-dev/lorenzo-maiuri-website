@@ -1,0 +1,6 @@
+{
+    "slug": "data-warehouse-modernization-short",
+    "title": "Data Warehouse Modernization",
+    "description": "Led migration from Oracle to PostgreSQL, enhanced ETL orchestration & implemented CI/CD, resulting in 100% cost reduction and 20% performance improvement.",
+    "image": "/images/projects/data-warehouse-modernization.jpeg"
+  }

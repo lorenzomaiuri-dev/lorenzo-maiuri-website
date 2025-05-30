@@ -1,0 +1,57 @@
+{
+    "slug": "veterinary-platform-integrations",
+    "title": "Platform Integrations for Veterinary Customer Journey & B2B",
+    "highlighted": true,
+    "description": "Led the integration of HubSpot and BigCommerce with company systems to automate processes, synchronize data, and enhance the B2B experience for veterinary clients.",
+    "image": "/images/projects/veterinary-platform-integration.jpeg",
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": ["HubSpot", "BigCommerce", "Python", "PostgreSQL"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "The company needed to enhance its digital capabilities to better serve its veterinary clients and streamline internal operations. This involved a lack of integrated systems for customer relationship management and e-commerce, leading to manual processes, data silos, and inefficiencies in managing customer interactions and B2B transactions."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Automate key processes within the veterinary customer journey.",
+          "Enable seamless data synchronization between various company systems and HubSpot.",
+          "Implement a dedicated B2B e-commerce platform tailored for veterinary clients using BigCommerce.",
+          "Ensure efficient product catalog management, order processing, and client account handling through integrated systems."
+        ]
+      },
+      {
+        "title": "Solution Implemented",
+        "content": "I led the integration efforts for both HubSpot and BigCommerce with the company's internal platforms and databases, specifically focusing on enhancing the veterinary customer journey and the B2B experience for veterinary clients. This involved establishing robust data synchronization mechanisms, automating key processes, and ensuring seamless connectivity between different systems."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "Utilizing the HubSpot REST API to connect with internal systems and automate workflows.",
+          "Designing and creating ETL (Extract, Transform, Load) processes for data migration and synchronization between HubSpot and other platforms.",
+          "Integrating HubSpot with existing middleware solutions to facilitate data exchange.",
+          "Leading the implementation and customization of the BigCommerce B2B platform for veterinary services.",
+          "Designing and implementing API integrations between BigCommerce and internal inventory management and client databases.",
+          "Ensuring accurate and reliable data synchronization across all integrated systems.",
+          "Collaborating with cross-functional teams to gather requirements, define workflows, and optimize user experience.",
+          "Thorough testing of all integrated features to guarantee functionality and data integrity.",
+          "Troubleshooting integration issues and ensuring the smooth operation of both HubSpot and BigCommerce integrations."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "HubSpot REST API usage, BigCommerce API integration, ETL creation, middleware integration, data synchronization, database management, stakeholder communication, project coordination, troubleshooting, system integration, testing."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Complete and successful integration of HubSpot with company platforms and databases, automating key processes for the veterinary customer journey.",
+          "Real-time and accurate data synchronization achieved across various systems.",
+          "Successfully launched the dedicated BigCommerce B2B platform for veterinary services, tailored to the needs of veterinary clients.",
+          "Improved efficiency in product catalog management, order processing, and client account handling due to the seamless integration.",
+          "Enhanced user satisfaction among veterinary clients, as reflected in positive feedback."
+        ]
+      }
+    ]
+  }

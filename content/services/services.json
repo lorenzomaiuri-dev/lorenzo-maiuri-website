@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ai-automation",
+    "title": "AI & Automation",
+    "description": "Leverage the power of artificial intelligence and automation to optimize your business processes and gain a competitive edge.",
+    "image": "/images/services/ai_automation_service.jpeg",
+    "imageDetail": "/images/services/ai_automation_service_detail.jpeg",
+    "icon": "Brain",
+    "link": "/services#ai-automation",
+    "features": [
+      "Custom AI model development and deployment",
+      "AI-powered business process automation",
+      "Natural language processing solutions",
+      "Computer vision applications",
+      "Conversational AI and chatbots",
+      "Predictive analytics and forecasting"
+    ],
+    "caseStudy": {
+      "title": "AI-Powered Prioritization System for B2B Platform",
+      "description": "Integrated a machine learning algorithm into a B2B platform to automate and optimize the prioritization of tasks and customer requests, enhancing operational efficiency and processing times",
+      "link": "/projects/ml-prioritization-b2b"
+    }
+  },
+  {
+    "id": "software-development",
+    "title": "Software Development",
+    "description": "Custom software solutions designed to meet your specific business needs with a focus on scalability, performance, and user experience.",
+    "image": "/images/services/software.jpeg",
+    "imageDetail": "/images/services/software_detail.png",
+    "icon": "Code",
+    "link": "/services#software-development",
+    "features": [
+      "Full-stack web application development",
+      "Mobile app development",
+      "API design and integration",
+      "Custom integration and development",
+      "Legacy system modernization",
+      "Technical consulting and architecture design"
+    ],
+    "caseStudy": {
+      "title": "B2B Portal Redesign & Functionality Integration",
+      "description": "Led the redesign of a B2B portal's landing page and integrated key functionalities like invoices and delivery notes viewing, alongside analytics and a headless CMS for enhanced user experience and content management.",
+      "link": "/projects/b2b-portal-redesign"
+    }
+  },
+  {
+    "id": "data-engineering",
+    "title": "Data Engineering",
+    "description": "Transform your raw data into valuable insights with robust data pipelines, analytics, and visualization solutions.",
+    "image": "/images/services/data.jpeg",
+    "imageDetail": "/images/services/data_detail.png",
+    "icon": "Database",
+    "link": "/services#data-engineering",
+    "features": [
+      "Data warehouse implementation",
+      "ETL pipeline development",
+      "Database modeling and performance optimization",
+      "Real-time & batch data processing",
+      "Data visualization and dashboards",
+      "Data integration from third-party platforms"
+    ],
+    "caseStudy": {
+      "title": "Data Warehouse Modernization",
+      "description": "Led the migration and modernization of a data warehouse from Oracle to PostgreSQL, including improved ETL orchestration, CI/CD pipelines, and infrastructure enhancements, achieving a 100% cost reduction and 20% performance boost.",
+      "link": "/projects/data-warehouse-modernization"
+    }
+  }
+]

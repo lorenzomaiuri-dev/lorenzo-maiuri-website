@@ -1,0 +1,50 @@
+{
+    "slug": "ml-prioritization-b2b",
+    "title": "AI-Powered Prioritization System for B2B Platform",
+    "highlighted": true,
+    "description": "Integrated a machine learning algorithm into a B2B platform to automate and optimize the prioritization of tasks and customer requests, enhancing operational efficiency and processing times.",
+    "image": "/images/projects/ml-prioritization-b2b.jpeg",
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": ["Machine Learning", "Data Science", "Python", "scikit-learn", ".NET", "C#", "jquery", "bootstrap"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "A B2B platform faced challenges in efficiently managing and prioritizing a high volume of customer requests and internal tasks, leading to potential delays and suboptimal resource allocation."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Integrate a machine learning-based system to automate the prioritization of customer requests, orders, or tasks within the B2B platform.",
+          "Improve decision-making and resource allocation through predictive analytics.",
+          "Streamline workflows and enhance overall operational efficiency."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I led the integration of a machine learning (ML) algorithm directly into the B2B platform. This involved close collaboration with data scientists to develop, fine-tune, and deploy an ML model leveraging historical data to predict priority levels based on key factors."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "Collaborated with data scientists to understand business needs and define relevant features for the ML model.",
+          "Integrated the developed ML algorithm with the B2B platform's existing architecture.",          
+          "Ensured seamless data flow between the platform and the ML model for continuous learning and optimization.",
+          "Conducted thorough testing and validation of the integrated system to ensure accuracy and stability.",
+          "Provided documentation for the implemented solution and facilitated knowledge transfer to the relevant teams."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "Machine learning algorithm integration, B2B platform integration, data analysis, system optimization, cross-functional collaboration, project management, strategic planning."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Successfully integrated the AI-powered ML prioritization system into the B2B platform.",
+          "Achieved increased operational efficiency through optimized resource allocation.",
+          "Resulted in 20% faster processing times for critical orders and requests, significantly improving customer satisfaction and internal workflows."
+        ]
+      }
+    ]
+  }

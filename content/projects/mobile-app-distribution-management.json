@@ -1,0 +1,52 @@
+{
+    "slug": "mobile-app-distribution-management",
+    "title": "Centralized Mobile App Distribution & Management System",
+    "highlighted": true,
+    "description": "Developed a comprehensive system for streamlined mobile app deployment, lifecycle management, and detailed analytics on usage and performance for internal company applications.",
+    "image": "/images/projects/mobile-app-management.jpg",
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": ["Mobile App Distribution", "Firebase Analytics", "Firebase Crashlytics", "Python", "FastAPI", ".NET", "C#", "PostgreSQL", "jquery", "bootstrap", "Docker"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "The company required a more efficient and centralized way to distribute and manage its internal mobile applications, along with better insights into their usage and performance."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Create a centralized system for distributing and managing mobile applications across the organization.",
+          "Provide detailed analytics on app downloads, user engagement, installs, and other key performance indicators (KPIs).",
+          "Enable data-driven decision-making to optimize app distribution strategies and identify areas for improvement."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I developed a comprehensive system to manage the entire lifecycle of the company's mobile applications. This system facilitated streamlined app deployment, real-time tracking of download statistics, and the provision of crucial metrics related to user engagement and app performance."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "Centralized platform for uploading, managing, and distributing mobile applications to employees.",
+          "Integration with analytics tools to track app downloads, installs, active users, and engagement metrics.",
+          "Real-time dashboards and reporting capabilities to visualize key app performance data.",
+          "Secure authentication and authorization mechanisms to control app access.",
+          "Scalable architecture to support the growing number of applications and users.",
+          "Included features for app version control and update management"
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "Mobile app distribution systems, analytics integration, data reporting, full stack development, system architecture, security principles."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Enabled centralized and efficient management and distribution of mobile applications within the company.",
+          "Provided real-time download statistics and user engagement data, leading to a better understanding of app performance.",
+          "Enhanced decision-making by offering key insights into app usage patterns, facilitating better-targeted updates and improvements to the applications.",
+          "Improved efficiency in app deployment and reduced the overhead associated with manual distribution methods."
+        ]
+      }
+    ]
+  }

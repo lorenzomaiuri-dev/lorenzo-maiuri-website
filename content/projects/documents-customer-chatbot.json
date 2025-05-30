@@ -1,0 +1,72 @@
+{
+  "slug": "documents-customer-chatbot",
+  "title": "AI-Powered Customer Support Chatbot",
+  "highlighted": true,
+  "description": "Engineered an intelligent, end-to-end AI chatbot solution that provides instant, accurate answers from diverse company documentation, significantly boosting customer satisfaction and reducing support costs.",
+  "image": "/images/projects/intelligent-chatbot.jpg",
+  "liveUrl": null,
+  "githubUrl": null,
+  "technologies": ["GPT-4o", "LlamaIndex", "ChromaDB", "FastAPI", "Python", "Redis", "Salesforce API", "WordPress PHP", "Docker", "AWS EC2", "Phoenix by Arize AI"],
+  "sections": [
+    {
+      "title": "Context",
+      "content": "The primary need was to enhance customer support efficiency and internal knowledge sharing through an intelligent chatbot system capable of interacting with a wide range of company documents. Providing quick, precise answers to complex questions based on extensive documentation was time-consuming for the support team, and employees struggled to autonomously find necessary information."
+    },
+    {
+      "title": "Project Objectives",
+      "listItems": [
+        "Deliver rapid and accurate answers to complex inquiries by leveraging a vast documentation base.",
+        "Reduce the workload on the human support team, allowing them to focus on more complex issues.",
+        "Improve internal productivity by providing employees with easy and autonomous access to necessary information.",
+        "Ensure 24/7 availability of customer support.",
+        "Develop a scalable and reliable chatbot infrastructure."
+      ]
+    },
+    {
+      "title": "Implemented Solution",
+      "content": "I designed and implemented an end-to-end intelligent chatbot RAG solution with the following key features and components:"
+    },
+    {
+      "title": "Key Steps",
+      "listItems": [
+        "ETL Pipeline (Python): Developed a robust pipeline for extracting, transforming, and loading data from diverse sources (documents, databases, APIs) into vectorized embeddings.",
+        "Vector Database (ChromaDB): Indexed documents using embeddings for efficient semantic search and retrieval of relevant information.",
+        "Metadata Indexing: Enriched documents with comprehensive metadata to enable precise, contextual filtering of information, improving answer accuracy.",
+        "Large Language Model (GPT-4o): Leveraged OpenAI's advanced GPT-4o model for generating highly relevant, natural, and coherent responses.",
+        "LLM Abstraction Framework (LlamaIndex): Utilized LlamaIndex to seamlessly connect the chatbot to the vector database and the LLM, enabling intelligent querying and response generation.",
+        "Salesforce API Integration: Implemented automated ticket creation in Salesforce when the chatbot is unable to resolve an inquiry, ensuring no customer issue is left unaddressed.",
+        "Session Memory (Redis): Integrated Redis for conversational memory, allowing for more contextualized and personalized interactions across longer conversations.",
+        "REST API (FastAPI/Python): Developed a high-performance REST API using FastAPI and Python, serving as the backend for the chatbot and managing document context.",
+        "Performance Monitoring (Phoenix by Arize AI - Self-hosted): Set up a self-hosted Phoenix instance for continuous tracking and optimization of chatbot accuracy, latency, and overall performance.",
+        "Deployment (AWS EC2 with Docker): Deployed the entire infrastructure on AWS EC2 using Docker for containerization, ensuring a scalable, reliable, and easily manageable environment.",
+        "WordPress Integration (PHP Plugin): Developed a custom PHP plugin for seamless integration of the chatbot widget directly into the WordPress website, ensuring easy adoption and accessibility."
+      ]
+    },
+    {
+      "title": "Skills Used",
+      "listItems": [
+        "Data Processing: Python, pandas",
+        "Vector Database: ChromaDB",
+        "LLM Framework: LlamaIndex",
+        "Large Language Model: OpenAI GPT-4o",
+        "Backend/API: FastAPI, Python",
+        "Session Memory: Redis",
+        "CRM Integration: Salesforce API",
+        "CMS Integration: WordPress, PHP",
+        "Monitoring: Phoenix by Arize AI",
+        "Deployment: Docker, AWS EC2"
+      ]
+    },
+    {
+      "title": "Outcomes",
+      "listItems": [
+        "Significant Improvement in Response Times: Customers receive instant answers to their inquiries, drastically reducing wait times.",
+        "Increased Customer Satisfaction: Achieved higher customer satisfaction due to 24/7 availability of rapid and accurate responses.",
+        "Reduced Workload on Human Support Team: The chatbot successfully handled a significant portion of routine inquiries, allowing human agents to dedicate more time to complex and high-value issues",
+        "Enhanced Internal Productivity: Employees gained immediate and autonomous access to necessary company information, streamlining internal processes and reducing time spent searching for answers.",
+        "Scalable Customer Assistance: The solution provides scalable customer support, capable of handling fluctuating inquiry volumes without increasing human resource demands.",
+        "Continuous Optimization: Ongoing performance monitoring ensures the chatbot's accuracy and effectiveness are constantly refined, leading to sustained value."
+      ]
+    }
+  ]
+}

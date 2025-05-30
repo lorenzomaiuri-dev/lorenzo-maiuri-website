@@ -1,0 +1,55 @@
+{
+    "slug": "b2b-web-app-automated-tests",
+    "title": "Automated Testing Suite for B2B Web Application",
+    "highlighted": false,
+    "description": "Created a comprehensive suite of automated tests for a B2B web application using Playwright, targeting critical user flows to ensure consistent quality, faster issue identification, and a significant reduction in manual testing efforts.",    
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": ["Playwright", "C# (.NET)", "ASP.NET MVC", "Automated Testing", "Web Application Testing", "CI/CD Integration", "Test Automation Frameworks"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "The company's B2B web application, a crucial operational tool, relied heavily on manual testing, which was time-consuming, resource-intensive, and often led to slower identification of issues. There was a clear need to automate testing to improve efficiency, ensure consistent quality, and accelerate the development cycle."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Develop and implement a robust suite of automated tests for the company's B2B web application.",
+          "Focus on critical user flows and core functionalities to ensure high coverage of essential business processes.",
+          "Integrate tests into the build pipeline to run on every new build, enabling faster identification of regressions and issues.",
+          "Significantly reduce the time and resources spent on manual testing.",
+          "Improve the overall reliability, stability, and quality of the B2B application."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I designed and implemented a comprehensive automated testing solution for the B2B web application. Leveraging Playwright, a powerful web testing framework, I created a suite of tests that covered critical user journeys and functionalities. These tests were integrated into the continuous integration process, ensuring quality checks on every build and providing rapid feedback to the development team."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "Test Strategy & Planning: Collaborated with development and QA teams to identify critical user flows, high-priority functionalities, and key scenarios for test automation within the ASP.NET MVC B2B web application.",
+          "Framework Selection & Setup: Researched and selected Playwright as the automated testing framework due to its strong support for modern web applications, multiple browser capabilities, and ease of integration with .NET.",
+          "Test Suite Development: Developed a comprehensive suite of automated tests using Playwright (likely with C# given the ASP.NET MVC backend). These tests simulated real user interactions across various critical workflows, such as login, navigation, data entry, and form submissions.",
+          "Data Management for Tests: Implemented strategies for managing test data, including setup and teardown procedures, to ensure tests were repeatable and independent.",
+          "CI/CD Integration: Integrated the automated test suite into the existing CI/CD pipeline (e.g., Azure DevOps, Jenkins). This ensured that tests automatically ran on every code commit or build, providing immediate feedback on code quality and regressions.",
+          "Reporting & Analytics: Configured test reporting to provide clear, actionable results, making it easy to identify failed tests and underlying issues.",
+          "Maintenance & Scalability: Designed the test suite with maintainability and scalability in mind, using modular and reusable components to facilitate future test creation and updates.",
+          "Collaboration & Training: Worked closely with development and QA teams to ensure alignment on testing goals and provided training on interpreting test results and contributing to the test suite."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "Automated Testing Frameworks (Playwright), Web Application Testing, CI/CD Integration, Test Automation, ASP.NET MVC, C#, Software Quality Assurance, Test Strategy, Test Case Design, Problem Solving, Regression Testing."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Reduced Manual Testing Efforts: Significantly reduced the time and resources spent on manual testing, freeing up QA teams to focus on more complex exploratory testing.",
+          "Faster Issue Identification: Enabled faster identification of issues and regressions by running automated tests on every build, leading to quicker bug fixes and a more stable development cycle.",
+          "Increased Test Coverage & Reliability: Increased overall test coverage and reliability of the B2B web application, boosting product quality and confidence in new releases.",
+          "Improved Application Stability: Contributed to a more reliable and stable application, as critical functionalities were continuously validated through automated checks."
+        ]
+      }
+    ]
+  }

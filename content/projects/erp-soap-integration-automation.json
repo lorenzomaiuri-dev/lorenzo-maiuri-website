@@ -1,0 +1,53 @@
+{
+    "slug": "erp-soap-integration-automation",
+    "title": "ERP SOAP Web Services Integration for Automated Record Creation",
+    "highlighted": false,
+    "description": "Implemented a robust integration with the ERP system using SOAP web services to fully automate the creation of new customer and product records, significantly reducing manual intervention and improving data accuracy.",    
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": [".NET Core", "C#", "Python", "SOAP Web Services", "ERP Integration (Sage X3)", "Workflow Automation", "API Development", "Docker"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "The company faced inefficiencies and data entry errors due to the manual process of creating new customer and product records within the ERP system. There was a clear need to automate this workflow to enhance operational efficiency and data integrity."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Automate the creation of customer and product records within the ERP system (Sage X3) using its provided SOAP web services.",
+          "Eliminate manual data entry for these record types to minimize human errors.",
+          "Design and test robust workflows to ensure seamless and reliable communication between external systems and the ERP.",
+          "Improve overall process efficiency and data accuracy for customer and product master data."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I developed a comprehensive solution that leveraged .NET Core C# to serve as an API gateway for integrating with the ERP's SOAP web services. This API was containerized using Docker. A Python-based consumer application then interacted with this API, streamlining the entire record creation process and minimizing manual touchpoints."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "SOAP Web Service Analysis: Analyzed the ERP's (Sage X3) SOAP web service documentation to understand the required message formats, operations and data structures for creating customer and product records.",
+          ".NET Core API Development (C#): Built a .NET Core C# application designed to expose a clean API layer for external systems. This application handled the complexities of constructing and consuming the ERP's SOAP messages.",
+          "Docker Containerization: Packaged the .NET Core API into Docker containers to ensure consistent deployment environments, scalability, and ease of management.",
+          "Python Consumer Development: Developed a Python application responsible for preparing data from various sources and sending it to the .NET Core API. This Python application served as the primary initiator of the automated record creation process.",
+          "Workflow Design & Implementation: Designed the end-to-end automation workflow, including data validation, error handling, and retry mechanisms for failed transmissions.",
+          "Integration Testing: Conducted rigorous testing of the entire integration chain, from the Python consumer to the .NET Core API and finally to the ERP's SOAP services, ensuring data accuracy and workflow reliability.",
+          "Error Logging & Monitoring: Implemented comprehensive logging within both the .NET Core API and the Python consumer to track process execution and quickly identify any integration issues."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "SOAP Web Services, ERP Integration (Sage X3), .NET Core, C#, Python, Docker, API Development, Workflow Automation, Data Validation, Error Handling, System Integration, Testing, Problem Solving, Data Accuracy."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Full Automation of Record Creation: Achieved 100% automation for the creation of new customer and product records, eliminating the need for manual data entry.",
+          "Enhanced Data Accuracy: By removing manual intervention and implementing robust validation, the solution significantly enhanced data accuracy, cutting down input errors.",
+          "Improved Process Efficiency: The automated workflow led to a substantial improvement in process efficiency, drastically reducing the time and resources previously spent on manual record creation.",
+          "Seamless System Communication: Established seamless and reliable communication between external systems and the ERP, creating a more cohesive and integrated business environment."
+        ]
+      }
+    ]
+  }

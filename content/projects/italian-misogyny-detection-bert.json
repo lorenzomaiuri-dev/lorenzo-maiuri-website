@@ -1,0 +1,49 @@
+{
+    "slug": "italian-misogyny-detection-bert",
+    "title": "AI for Italian Misogyny Detection",
+    "highlighted": true,
+    "description": "Fine-tuned BERT model for accurate detection of misogynistic content in Italian text, trained and evaluated on the AMI dataset.",
+    "image": "/images/projects/italian-misogyny-detection.jpeg",
+    "liveUrl": "https://huggingface.co/spaces/maiurilorenzo/misogyny-detection-it-space",
+    "githubUrl": "https://huggingface.co/maiurilorenzo/misogyny-detection-it",
+    "technologies": ["NLP", "Hugging Face Transformers", "BERT", "Italian Language", "python"],
+    "sections": [
+      {
+        "title": "Project Overview",
+        "content": "This project involved fine-tuning the dbmdz/bert-base-italian-xxl-uncased model for the specific task of detecting misogynistic content in the Italian language. The model is a binary text classifier, identifying whether a given text is misogynistic (label 1) or not (label 0)."
+      },
+      {
+        "title": "Model Details",
+        "listItems": [
+          "Fine-tuned from the pre-trained Italian BERT model: dbmdz/bert-base-italian-xxl-uncased",
+          "Specifically designed for misogyny detection in Italian text.",
+          "Trained and evaluated on the AMI (Automatic Misogyny Identification) dataset."
+        ]
+      },
+      {
+        "title": "Training and Evaluation",
+        "content": "The model was trained using the AMI dataset, which contains labeled Italian texts. Key training hyperparameters included a learning rate of 2e-5, a batch size of 32, and 5 epochs. The AdamW optimizer was used with weight decay. Evaluation was performed on a balanced test set from the AMI dataset, with metrics including Accuracy (0.9412), F1-score (0.9420), Precision (0.9291), and Recall (0.9553)."
+      },
+      {
+        "title": "Key Technologies",
+        "listItems": [
+          "Natural Language Processing (NLP)",
+          "Hugging Face Transformers library for model fine-tuning and deployment",
+          "BERT (Bidirectional Encoder Representations from Transformers) architecture",
+          "Italian language-specific pre-trained model (dbmdz/bert-base-italian-xxl-uncased)"
+        ]
+      },
+      {
+        "title": "Potential Uses",
+        "listItems": [
+          "Moderation of online content to identify and filter misogynistic text.",
+          "Social media analysis to study the prevalence and patterns of misogyny in Italian online discourse.",
+          "Sociolinguistic research on the linguistic features of misogynistic language in Italian."
+        ]
+      },
+      {
+        "title": "Limitations and Considerations",
+        "content": "The model's performance is dependent on the data it was trained on (AMI dataset) and may exhibit biases present in that data. It might struggle with more subtle or implicit forms of misogyny. Use in conjunction with human oversight is recommended for critical applications. The model is specifically designed for Italian text and may not perform reliably on other languages."
+      }
+    ]
+  }

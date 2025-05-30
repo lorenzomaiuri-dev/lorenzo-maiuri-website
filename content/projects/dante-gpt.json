@@ -1,0 +1,59 @@
+{
+    "slug": "dante-gpt",
+    "title": "DanteGPT: Fine-tuned GPT-2 for Dantesque Text Generation",
+    "highlighted": false,
+    "description": "Developed and fine-tuned 'DanteGPT,' a GPT-2 model designed to generate text in the poetic style of Dante Alighieri’s Divina Commedia. This project, available on Hugging Face and Kaggle, emulates Dante's tercet structure, rhyme scheme (ABA BCB CDC), and thematic elements.",    
+    "liveUrl": "https://huggingface.co/maiurilorenzo/dante-gpt",
+    "githubUrl": "https://www.kaggle.com/code/lorenzomaiuri/dante-gpt",
+    "technologies": ["NLP", "Deep Learning", "GPT-2 (Fine-tuning)", "Python", "Hugging Face Transformers", "Kaggle", "Text Generation", "Poetic Style Transfer", "Italian Language Processing"],
+    "sections": [
+      {
+        "title": "Introduction & Overview",
+        "content": "'DanteGPT' is an innovative project that leverages the power of deep learning to recreate the distinctive poetic style of Dante Alighieri. This model is a fine-tuned version of OpenAI's GPT-2, specifically engineered to generate text that emulates the structure, rhyme scheme (tercets with ABA BCB CDC), and thematic elements (like divine justice and moral reflection) characteristic of Dante's seminal work, the Divina Commedia. The project is openly available on Hugging Face (Model Repository and Demo Space) and documented with a Kaggle Notebook."
+      },
+      {
+        "title": "Model Details",
+        "listItems": [
+          "Developed By: Lorenzo Maiuri (Independent research)",
+          "Model Type: Fine-tuned GPT-2 (base version by OpenAI)",
+          "Language: Italian (it)",
+          "License: CC BY-SA 4.0",
+          "Finetuned From: GPT-2 (OpenAI)"
+        ]
+      },
+      {
+        "title": "Model Sources & Accessibility",
+        "content": "The 'DanteGPT' model and associated resources are accessible through:\n\nHugging Face Model Repository: The primary repository for the model.\nDataset: Fine-tuned on the `Divina Commedia` dataset from Hugging Face Datasets.\nKaggle Notebook: Provides a detailed walkthrough of the fine-tuning process.\nDemo: An interactive 'DanteGPT Space' on Hugging Face allows users to experiment with text generation directly."
+      },
+      {
+        "title": "Usage & Applications",
+        "content": "DanteGPT is designed for specific applications in literary exploration, creative writing, and educational contexts. It can be used to generate new verses in Dante's style from a given prompt. The model can be directly integrated into Python projects using the Hugging Face `transformers` library.\n\nWhile suitable for literary generation, it's crucial to note that the model may produce inaccurate or nonsensical text outside its intended domain and is not suitable for tasks requiring factual accuracy."
+      },
+      {
+        "title": "Training Details",
+        "listItems": [
+          "Training Data: Fine-tuned on the `Divina Commedia` dataset (maiurilorenzo/divina-commedia) from Hugging Face Datasets, featuring cleaned and tokenized text.",
+          "Preprocessing: Involved removing texts exceeding 1024 tokens, splitting into training/test subsets, and adding `<|startoftext|>` and `<|endoftext|>` special tokens.",
+          "Training Hyperparameters: Utilized FP16 mixed precision, a learning rate of 2e-5, batch size of 16 (with gradient accumulation), 5 epochs, AdamW optimizer, and a linear warm-up with decay scheduler.",
+          "Training Time & Size: Approximately 1.5 hours on an NVIDIA Tesla P100 (16 GB), resulting in a model size of ~500 MB."
+        ]
+      },
+      {
+        "title": "Evaluation",
+        "content": "Evaluation focused on the coherence and thematic relevance of the generated text, primarily through human assessment. A subset of 20 samples was held out for testing.\n\nResults: Human evaluation indicated approximately 75% accuracy in replicating Dante’s style (based on thematic and stylistic criteria). While successful in generating stylistically accurate text, inconsistencies in rhyme and coherence may occur in longer outputs."
+      },
+      {
+        "title": "Skills Used",
+        "content": "Natural Language Processing (NLP), Deep Learning, Transformer Models (GPT-2), Fine-tuning, Python, Hugging Face Transformers, Kaggle Notebooks, Text Generation, Poetic Analysis, Data Preprocessing, Model Evaluation, Italian Language Processing, Machine Learning Operations (MLOps - conceptual)."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Successful Style Replication: Developed a model capable of generating text that accurately replicates the unique poetic structure and thematic elements of Dante Alighieri’s Divina Commedia.",
+          "Accessible Literary AI Tool: Made the model easily accessible for literary exploration, creative writing, and educational purposes through Hugging Face and Kaggle.",
+          "Demonstrated NLP Expertise: Showcased proficiency in fine-tuning large language models, data preprocessing, and evaluating generative AI outputs.",
+          "Efficient Training & Deployment: Achieved efficient training on a cloud GPU and demonstrated capability in deploying interactive AI demos."
+        ]
+      }
+    ]
+  }

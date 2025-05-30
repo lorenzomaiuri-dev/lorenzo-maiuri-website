@@ -1,0 +1,54 @@
+{
+    "slug": "pharmaceutical-data-integration",
+    "title": "Pharmaceutical Data Integration & Centralization",
+    "highlighted": false,
+    "description": "Led the integration of a pharmaceutical SOAP web service to centralize and streamline critical data into a PostgreSQL Data Warehouse via a robust .NET Core API and ETL pipeline, ensuring data accuracy, scalability, and optimized accessibility for business analysis.",    
+    "liveUrl": null,
+    "githubUrl": null,
+    "technologies": ["SOAP Web Services", ".NET Core", "C#", "PostgreSQL", "ETL (Extract, Transform, Load)", "Docker", "Data Warehousing", "API Development", "SQL", "Data Consistency", "Scalability"],
+    "sections": [
+      {
+        "title": "Context",
+        "content": "A pharmaceutical company needed to centralize critical data from an external web service into an internal data warehouse for business analysis. The existing process was fragmented, leading to data inconsistencies and hindering strategic decision-making. The challenge involved integrating large volumes of data while ensuring accuracy, consistency, and scalability."
+      },
+      {
+        "title": "Project Objectives",
+        "listItems": [
+          "Ensure accurate and efficient integration of pharmaceutical data from an external SOAP web service.",
+          "Optimize data processing and storage within a PostgreSQL Data Warehouse.",
+          "Design and deliver a scalable and maintainable solution capable of handling large volumes of data (millions of records).",
+          "Enhance data accessibility and consistency for strategic business analysis."
+        ]
+      },
+      {
+        "title": "Implemented Solution",
+        "content": "I led the development and implementation of a comprehensive data integration solution. This involved designing a robust ETL pipeline powered by a .NET Core API, which consumed data from the external SOAP web service and efficiently loaded it into a PostgreSQL Data Warehouse. The entire solution was containerized using Docker, ensuring portability, scalability, and ease of deployment."
+      },
+      {
+        "title": "Key Steps",
+        "listItems": [
+          "Web Service Integration (SOAP): Developed a .NET Core application to consume data from the external pharmaceutical SOAP web service, handling complex XML structures and ensuring reliable data extraction.",
+          "ETL Pipeline Design & Development: Designed and implemented a robust Extract, Transform, Load (ETL) pipeline using .NET Core and C#. This pipeline was responsible for extracting raw data, applying necessary transformations (e.g., data cleaning, standardization, aggregation), and loading it into the PostgreSQL Data Warehouse.",
+          "PostgreSQL Data Warehouse Optimization: Optimized the PostgreSQL database schema and queries for efficient storage and retrieval of millions of pharmaceutical records, ensuring high performance for analytical workloads.",
+          "Data Quality & Consistency Checks: Implemented extensive data validation and consistency checks within the ETL process to ensure the accuracy and reliability of the integrated data.",
+          "Docker Containerization: Containerized the .NET Core API and ETL components using Docker, creating isolated and portable environments that significantly streamlined development, testing, and deployment processes.",
+          "Error Handling & Logging: Implemented comprehensive error handling, logging, and monitoring mechanisms throughout the ETL pipeline to track data flow, identify issues, and facilitate quick resolution.",
+          "Performance Tuning & Scalability: Focused on performance tuning for large data volumes, including optimizing database inserts/updates and ETL batch processing, to ensure the solution's scalability for future data growth.",
+          "Automated Scheduling (Conceptual/External): Designed the ETL process to be easily integrated with external schedulers for automated, periodic data updates."
+        ]
+      },
+      {
+        "title": "Skills Used",
+        "content": "SOAP Web Services, .NET Core, C#, PostgreSQL, ETL (Extract, Transform, Load), Docker, Data Warehousing, API Development, SQL, Data Quality, Data Consistency, Scalability, Problem Solving, Project Management, Time Management, Performance Tuning."
+      },
+      {
+        "title": "Outcomes",
+        "listItems": [
+          "Robust & Containerized Solution: Delivered a robust, containerized solution using Docker, which reduced deployment time by 40% due to streamlined setup and consistent environments.",
+          "Enhanced Data Accessibility & Accuracy: Achieved enhanced data accessibility and accuracy for business analytics purposes, providing a single source of truth for pharmaceutical data.",
+          "Improved Data Handling Efficiency: Successfully integrated and processed large volumes of pharmaceutical data with a 20% improvement in data handling efficiency, optimizing the entire data pipeline.",
+          "Scalable Infrastructure for Analysis: Provided a scalable and maintainable infrastructure, capable of supporting the growth of data and complex business intelligence requirements, optimizing strategic decision-making."
+        ]
+      }
+    ]
+  }
