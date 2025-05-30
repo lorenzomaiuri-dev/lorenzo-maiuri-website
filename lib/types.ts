@@ -16,7 +16,6 @@ export interface Project {
     title?: string;
     content?: string;
     listItems?: string[];
-    // Aggiungi altri tipi di contenuto se necessario
   }[];
 }
 
@@ -50,3 +49,62 @@ export const iconMap: Record<string, LucideIcon> = {
   "Code": Code,
   "Database": Database,
 };
+
+export interface ChatRequest {
+  chatId?: string | null;
+  message: string;
+}
+
+export interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+  timestamp: string;
+  action?: ChatResponseAction;
+  isExpanded?: boolean; 
+}
+
+export type ChatResponseAction =
+  | { action_type: 'show_contact'; data: { email?: string; linkedin?: string; github?: string; portfolio?: string; } }
+  | { action_type: 'show_projects'; data: { projects: Array<{ title: string; description: string; link?: string; technologies: string[]; }> } }
+  | { action_type: 'show_bio'; data: { bio: string } }
+  | { action_type: 'show_skills'; data: { skills: Record<string, string[]> } }
+  | { action_type: 'show_experience'; data: { experience: Array<{ title: string; company: string; period: string; description: string; }> } }
+  | { action_type: 'show_certifications'; data: { certifications: Array<{ name: string; year: number; }> } }
+  | { action_type: 'send_email'; data: { subject?: string; body?: string } }
+  | { action_type: 'display_message'; data: { message: string } }
+  | { action_type: 'none'; data: {} };
+
+export interface ChatResponse {
+  success?: boolean;
+  chatId: string;
+  message: string;
+  thought?: string;
+  action: ChatResponseAction;
+  error?: string;
+  fallback?: boolean;
+}
+
+export interface ToastState {
+  show: boolean;
+  message: string;
+  type?: 'success' | 'info' | 'warning' | 'error';
+  duration?: number;
+  link?: { href: string; text: string; target?: '_self' | '_blank' };
+}
+
+export interface ToastProps {
+  message: string;
+  type?: 'success' | 'info' | 'warning' | 'error';
+  onClose: () => void;
+  duration?: number;
+  link?: {
+    href: string;
+    text: string;
+    target?: '_self' | '_blank';
+  };
+  show: boolean;
+}
+
+export interface LorenzoBotProps {
+  onNotification?: () => void;
+}
