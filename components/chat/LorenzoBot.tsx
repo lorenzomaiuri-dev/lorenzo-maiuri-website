@@ -7,7 +7,7 @@ import ChatContainer from './ChatContainer';
 import ChatInput from './ChatInput';
 import { useChatbot } from '@/lib/hooks/useChatbot';
 
-const MESSAGE_COOLDOWN_SECONDS = (process.env.FRONTEND_MESSAGE_COOLDOWN) ? parseInt(process.env.FRONTEND_MESSAGE_COOLDOWN) : 10000;
+const MESSAGE_COOLDOWN_MILLISECONDS = (process.env.FRONTEND_MESSAGE_COOLDOWN_MILLISECONDS) ? parseInt(process.env.FRONTEND_MESSAGE_COOLDOWN_MILLISECONDS) : 10000;
 
 const LorenzoBot: React.FC<LorenzoBotProps> = ({ onNotification }) => {
 
@@ -23,6 +23,7 @@ const LorenzoBot: React.FC<LorenzoBotProps> = ({ onNotification }) => {
   const [chatId, setChatId] = useState<string>('');
 
   const [isOnCooldown, setIsOnCooldown] = useState(false);
+  const [cooldownEndTime, setCooldownEndTime] = useState<number | null>(null);
   const cooldownTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const [toast, _setToast] = useState<ToastState | null>(null);
@@ -107,9 +108,13 @@ const LorenzoBot: React.FC<LorenzoBotProps> = ({ onNotification }) => {
     if (!inputMessage.trim() || isLoading) return;
 
     if (isOnCooldown) {
+      const remainingSeconds = cooldownEndTime
+        ? parseInt(String(Math.ceil((cooldownEndTime - Date.now()))/1000))
+        : MESSAGE_COOLDOWN_MILLISECONDS / 1000; 
+
       setToast({
         show: true,
-        message: `Please wait ${MESSAGE_COOLDOWN_SECONDS/1000} seconds before sending another message.`,
+        message: `Please wait ${remainingSeconds} second${remainingSeconds !== 1 ? 's' : ''} before sending another message.`,
         type: 'warning',
         duration: 2000,
       });
@@ -121,10 +126,11 @@ const LorenzoBot: React.FC<LorenzoBotProps> = ({ onNotification }) => {
 
     // Activate cooldown
     setIsOnCooldown(true);
+    setCooldownEndTime(Date.now() + MESSAGE_COOLDOWN_MILLISECONDS);
     cooldownTimerRef.current = setTimeout(() => {
       setIsOnCooldown(false);
       cooldownTimerRef.current = null;
-    }, MESSAGE_COOLDOWN_SECONDS);
+    }, MESSAGE_COOLDOWN_MILLISECONDS);
 
     await sendMessageToApi(currentInput);
   };
