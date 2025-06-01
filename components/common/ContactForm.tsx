@@ -6,11 +6,12 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Send, Loader } from 'lucide-react';
 
-// Schema di validazione
+// Validation schema for the contact form
 const contactSchema = z.object({
-  name: z.string().min(2, { message: 'Name must be at least 2 characters' }),
-  email: z.string().email({ message: 'Insert a valid email' }),
-  message: z.string().min(10, { message: 'Message must be at least 10 characters' }),
+  user_name: z.string().min(2, { message: 'Name must be at least 2 characters' }).max(50, { message: 'Name must be at most 50 characters' }),
+  user_email: z.string().email({ message: 'Insert a valid email' }),
+  user_company: z.string().max(50, { message: 'Company must be at most 50 characters' }).optional(),
+  message: z.string().min(10, { message: 'Message must be at least 10 characters' }).max(5000, { message: 'Message must be at most 5000 characters' }),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -45,12 +46,11 @@ export default function ContactForm() {
       if (!response.ok) {
         throw new Error('Error sending the message. Retry.');
       }
-
-      // Successo
+      
       setSuccess(true);
       reset();
 
-      // Reset del messaggio di successo dopo 5 secondi
+      // Reset success state after 5 seconds
       setTimeout(() => {
         setSuccess(false);
       }, 5000);
@@ -62,42 +62,54 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6"> {/* Aumentato lo spazio tra gli elementi */}
-      {/* Nome */}
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"> {/* Testo label grigio chiaro */}
+        <label htmlFor="user_name" className="block text-sm font-medium text-gray-300 mb-2">
           Name
         </label>
         <input
-          id="name"
+          id="user_name"
           type="text"
-          className={`bg-zinc-800 border border-zinc-700 text-white rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3 ${errors.name ? 'border-red-500' : ''}`}
-          {...register('name')}
+          className={`bg-zinc-800 border border-zinc-700 text-white rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3 ${errors.user_name ? 'border-red-500' : ''}`}
+          {...register('user_name')}
         />
-        {errors.name && (
-          <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
+        {errors.user_name && (
+          <p className="mt-1 text-sm text-red-500">{errors.user_name.message}</p>
         )}
       </div>
 
-      {/* Email */}
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"> {/* Testo label grigio chiaro */}
+        <label htmlFor="user_company" className="block text-sm font-medium text-gray-300 mb-2">
+          Company
+        </label>
+        <input
+          id="user_company"
+          type="text"
+          className={`bg-zinc-800 border border-zinc-700 text-white rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3 ${errors.user_company ? 'border-red-500' : ''}`}
+          {...register('user_company')}
+        />
+        {errors.user_company && (
+          <p className="mt-1 text-sm text-red-500">{errors.user_company.message}</p>
+        )}
+      </div>
+      
+      <div>
+        <label htmlFor="user_email" className="block text-sm font-medium text-gray-300 mb-2">
           Email
         </label>
         <input
-          id="email"
+          id="user_email"
           type="email"
-          className={`bg-zinc-800 border border-zinc-700 text-white rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3 ${errors.email ? 'border-red-500' : ''}`} 
-          {...register('email')}
+          className={`bg-zinc-800 border border-zinc-700 text-white rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3 ${errors.user_email ? 'border-red-500' : ''}`} 
+          {...register('user_email')}
         />
-        {errors.email && (
-          <p className="mt-1 text-sm text-red-500">{errors.email.message}</p> 
+        {errors.user_email && (
+          <p className="mt-1 text-sm text-red-500">{errors.user_email.message}</p> 
         )}
-      </div>
-
-      {/* Messaggio */}
+      </div>      
+      
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"> {/* Testo label grigio chiaro */}
+        <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
           Message
         </label>
         <textarea
@@ -110,21 +122,19 @@ export default function ContactForm() {
           <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
         )}
       </div>
-
-      {/* Messaggi di stato */}
+      
       {error && (
-        <div className="p-3 bg-red-900 border border-red-700 text-red-400 rounded-md"> {/* Errore scuro */}
+        <div className="p-3 bg-red-900 border border-red-700 text-red-400 rounded-md">
           {error}
         </div>
       )}
 
       {success && (
-        <div className="p-3 bg-green-900 border border-green-700 text-green-400 rounded-md"> {/* Successo scuro */}
-          Your message has been sent!
+        <div className="p-3 bg-green-900 border border-green-700 text-green-400 rounded-md">
+          Your message has been sent! I will get back to you as soon as possible. You can chat with LorenzoBot as well while you wait.
         </div>
       )}
-
-      {/* Pulsante di invio */}
+      
       <button
         type="submit"
         disabled={isSubmitting}
