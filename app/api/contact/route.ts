@@ -7,8 +7,12 @@ const contactSchema = z.object({
   user_email: z.string().email('Invalid email address'),
   user_company: z.string().max(50, 'Company name cannot exceed 50 characters').optional(),
   message: z.string().min(10, 'Message must be at least 10 characters').max(5000, 'Message cannot exceed 5000 characters'),
-  recaptchaToken: z.string().min(1, 'reCAPTCHA token is missing.'),
+  recaptchaToken: process.env.NEXT_PUBLIC_USE_CAPTCHA == "true"
+    ? z.string().min(1, 'reCAPTCHA token is missing.')
+    : z.string().optional(),
 });
+
+
 
 export async function POST(req: Request) {
   try {    
@@ -23,9 +27,9 @@ export async function POST(req: Request) {
       );
     }
     
-    const { user_name, user_email, user_company, message, recaptchaToken } = result.data;
-    
-    const recaptchaSecretKey = process.env.RECAPTCHA_SECRET_KEY;
+    if (process.env.NEXT_PUBLIC_USE_CAPTCHA == "true") {
+      const { recaptchaToken } = result.data; 
+      const recaptchaSecretKey = process.env.RECAPTCHA_SECRET_KEY;
 
     if (!recaptchaSecretKey) {
       console.error('RECAPTCHA_SECRET_KEY is not defined.');
@@ -53,6 +57,9 @@ export async function POST(req: Request) {
         { status: 403 }
       );
     }
+    }
+    
+    const { user_name, user_email, user_company, message } = result.data; 
     
     // Environment variable checks
     const serviceId = process.env.EMAILJS_SERVICE_ID;

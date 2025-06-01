@@ -7,22 +7,26 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Send, Loader } from 'lucide-react';
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react19-google-recaptcha-v3';
 
+// Check if reCAPTCHA is enabled
+const recaptchaEnabled = process.env.NEXT_PUBLIC_USE_CAPTCHA === 'true';
+
 // Validation schema for the contact form
 const contactSchema = z.object({
   user_name: z.string().min(2, { message: 'Name must be at least 2 characters' }).max(50, { message: 'Name must be at most 50 characters' }),
   user_email: z.string().email({ message: 'Insert a valid email' }),
   user_company: z.string().max(50, { message: 'Company must be at most 50 characters' }).optional(),
   message: z.string().min(10, { message: 'Message must be at least 10 characters' }).max(5000, { message: 'Message must be at most 5000 characters' }),
-  recaptchaToken: z.string().min(1, { message: 'reCAPTCHA verification failed. Please try again.' }),
+  recaptchaToken: recaptchaEnabled
+    ? z.string().min(1, 'reCAPTCHA token is missing.')
+    : z.string().optional(),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-function InnerContactForm() {
+function InnerContactForm({ recaptchaEnabled }: { recaptchaEnabled: boolean }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const {
     register,
@@ -34,26 +38,33 @@ function InnerContactForm() {
     resolver: zodResolver(contactSchema),
   });
 
+  // Only use reCAPTCHA logic if enabled
+  const { executeRecaptcha } = recaptchaEnabled ? useGoogleReCaptcha() : { executeRecaptcha: undefined };
 
   const generateRecaptchaToken = useCallback(async () => {
+    if (!recaptchaEnabled) return;
     if (!executeRecaptcha) {
       console.log('Execute recaptcha not yet available');
       return;
     }
     const token = await executeRecaptcha('contact_form_submission');
     setValue('recaptchaToken', token);
-  }, [executeRecaptcha, setValue]);
+  }, [executeRecaptcha, setValue, recaptchaEnabled]);
 
   useEffect(() => {
-    generateRecaptchaToken();
-  }, [generateRecaptchaToken]);
+    if (recaptchaEnabled) {
+      generateRecaptchaToken();
+    }
+  }, [generateRecaptchaToken, recaptchaEnabled]);
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     setError(null);
 
     try {
-      await generateRecaptchaToken();
+      if (recaptchaEnabled) {
+        await generateRecaptchaToken();
+      }
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -66,11 +77,13 @@ function InnerContactForm() {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Error sending the message. Retry.');
       }
-      
+
       setSuccess(true);
       reset();
-      generateRecaptchaToken();
-      
+      if (recaptchaEnabled) {
+        generateRecaptchaToken();
+      }
+
       setTimeout(() => {
         setSuccess(false);
       }, 5000);
@@ -112,7 +125,7 @@ function InnerContactForm() {
           <p className="mt-1 text-sm text-red-500">{errors.user_company.message}</p>
         )}
       </div>
-      
+
       <div>
         <label htmlFor="user_email" className="block text-sm font-medium text-gray-300 mb-2">
           Email
@@ -120,14 +133,14 @@ function InnerContactForm() {
         <input
           id="user_email"
           type="email"
-          className={`bg-zinc-800 border border-zinc-700 text-white rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3 ${errors.user_email ? 'border-red-500' : ''}`} 
+          className={`bg-zinc-800 border border-zinc-700 text-white rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-3 ${errors.user_email ? 'border-red-500' : ''}`}
           {...register('user_email')}
         />
         {errors.user_email && (
-          <p className="mt-1 text-sm text-red-500">{errors.user_email.message}</p> 
+          <p className="mt-1 text-sm text-red-500">{errors.user_email.message}</p>
         )}
-      </div>      
-      
+      </div>
+
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
           Message
@@ -142,12 +155,12 @@ function InnerContactForm() {
           <p className="mt-1 text-sm text-red-500">{errors.message.message}</p>
         )}
       </div>
-      
+
       <input type="hidden" {...register('recaptchaToken')} />
       {errors.recaptchaToken && (
         <p className="mt-1 text-sm text-red-500">{errors.recaptchaToken.message}</p>
       )}
-      
+
       {error && (
         <div className="p-3 bg-red-900 border border-red-700 text-red-400 rounded-md">
           {error}
@@ -159,13 +172,13 @@ function InnerContactForm() {
           Your message has been sent! I will get back to you as soon as possible. You can chat with LorenzoBot as well while you wait.
         </div>
       )}
-      
+
       <button
         type="submit"
         disabled={isSubmitting}
         className={`inline-flex items-center justify-center py-3 px-6 rounded-md shadow-sm text-white font-semibold bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full ${
           isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
-        }`} 
+        }`}
       >
         {isSubmitting ? (
           <>
@@ -186,18 +199,23 @@ function InnerContactForm() {
 export default function ContactForm() {
   const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
-  if (!recaptchaSiteKey) {
-    console.error('NEXT_PUBLIC_RECAPTCHA_SITE_KEY is not defined. reCAPTCHA will not work.');
+  if (recaptchaEnabled) {
+    if (!recaptchaSiteKey) {
+      console.error('NEXT_PUBLIC_RECAPTCHA_SITE_KEY is not defined. reCAPTCHA will not work.');
+      return (
+        <div className="text-red-500 text-center">
+          Error: reCAPTCHA site key is missing. Please configure your environment variables.
+        </div>
+      );
+    }
+
     return (
-      <div className="text-red-500 text-center">
-        Error: reCAPTCHA site key is missing. Please configure your environment variables.
-      </div>
+      <GoogleReCaptchaProvider reCaptchaKey={recaptchaSiteKey}>
+        <InnerContactForm recaptchaEnabled={true} />
+      </GoogleReCaptchaProvider>
     );
   }
 
-  return (
-    <GoogleReCaptchaProvider reCaptchaKey={recaptchaSiteKey}>
-      <InnerContactForm />
-    </GoogleReCaptchaProvider>
-  );
+  
+  return <InnerContactForm recaptchaEnabled={false} />;
 }
