@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { getProjectBySlug } from '@/lib/utils';
 
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
 
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       locale: 'en_US',
     },
     alternates: {
-      canonical: `https://lorenzomaiuri.dev/projects/${params.slug}`,
+      canonical: `https://lorenzomaiuri.dev/projects/${slug}`,
     },
     keywords: project.technologies ? project.technologies.join(', ') : '',
   };

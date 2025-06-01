@@ -1,3 +1,9 @@
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://lorenzomaiuri.dev
+
+# Sitemaps
 Sitemap: https://lorenzomaiuri.dev/sitemap.xml
