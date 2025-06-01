@@ -4,13 +4,12 @@ import { type LucideIcon } from 'lucide-react';
 // lib/types.ts
 export interface Project {
   slug: string;
-  frontmatter: string;
   title: string;
   description: string;
-  highlighted: boolean;
+  highlighted?: boolean;
   image?: string;
-  liveUrl?: string;
-  githubUrl?: string;
+  liveUrl?: string | null | undefined;
+  githubUrl?: string | null | undefined;
   technologies?: string[];
   sections?: {
     title?: string;
@@ -20,7 +19,7 @@ export interface Project {
 }
 
 export interface ProjectCardProps {
-  project: Pick<Project, 'slug' | 'frontmatter'>;
+  project: Pick<Project, 'slug'>;
 }
 
 export interface GenericParams {
