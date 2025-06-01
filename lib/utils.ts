@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { type Project, type Service } from './types';
+import { type Project } from './types';
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 

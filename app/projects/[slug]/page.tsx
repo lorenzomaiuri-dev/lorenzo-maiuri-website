@@ -1,28 +1,30 @@
 import React from 'react'
 import { getProjectBySlug } from '@/lib/utils';
-import { type Project, GenericParams } from '@/lib/types';
+import { GenericParams } from '@/lib/types';
 import Image from 'next/image';
 import Link from 'next/link';
-import { generateSEO } from '@/lib/seo';
+import type { Metadata } from 'next';
 
-export async function generateMetadata({ params }: { params: GenericParams }) {
-  const awaitedParams = await params;
-  const { slug } = awaitedParams;
-  const project = await getProjectBySlug(slug);
+// export async function generateMetadata({ params }: { params: Promise<GenericParams> }): Promise<Metadata> {
+//   const awaitedParams = await params;
+//   const { slug } = awaitedParams;
+//   const project = await getProjectBySlug(slug);
 
-  if (!project) {
-    return { title: 'Project not found' };
-  }
-  return generateSEO({
-    title: project.title,
-    description: project.description,
-    ogImage: project.image ? `/images/projects/${project.image}` : undefined,
-    urlPath: `/projects/${slug}`,
-  });
-}
+//   if (!project) {
+//     return { title: 'Project not found' };
+//   }
+//   return {
+//     title: project.title,
+//     description: project.description,
+//     openGraph: {
+//       images: project.image ? [`/images/projects/${project.image}`] : [],
+//     },
+//     // url: `/projects/${slug}`,
+//   };
+// }
 
 interface ProjectDetailPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 const ProjectDetailPage: React.FC<ProjectDetailPageProps> = async ({ params }) => {

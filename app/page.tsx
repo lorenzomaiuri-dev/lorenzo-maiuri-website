@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import HeroSection from '@/components/home/HeroSection'

@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import { type Message, type ChatResponse, type ChatResponseAction } from '@/lib/types';
 
 interface UseChatbotOptions {
