@@ -147,7 +147,7 @@ export default function ServicesSection() {
                                     {selectedService.link && (
                                         <Link
                                             href={selectedService.link}
-                                            className="text-primary hover:text-primary-dark font-medium inline-flex items-center mt-2"
+                                            className="text-blue-500 hover:text-primary-dark font-medium inline-flex items-center mt-2"
                                         >
                                             Learn more
                                             <svg
