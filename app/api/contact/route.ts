@@ -7,6 +7,7 @@ const contactSchema = z.object({
   user_email: z.string().email('Invalid email address'),
   user_company: z.string().max(50, 'Company name cannot exceed 50 characters').optional(),
   message: z.string().min(10, 'Message must be at least 10 characters').max(5000, 'Message cannot exceed 5000 characters'),
+  recaptchaToken: z.string().min(1, 'reCAPTCHA token is missing.'),
 });
 
 export async function POST(req: Request) {
@@ -22,7 +23,36 @@ export async function POST(req: Request) {
       );
     }
     
-    const { user_name, user_email, user_company, message } = result.data;
+    const { user_name, user_email, user_company, message, recaptchaToken } = result.data;
+    
+    const recaptchaSecretKey = process.env.RECAPTCHA_SECRET_KEY;
+
+    if (!recaptchaSecretKey) {
+      console.error('RECAPTCHA_SECRET_KEY is not defined.');
+      return NextResponse.json(
+        { error: 'Server configuration error: reCAPTCHA secret key is missing.' },
+        { status: 500 }
+      );
+    }
+
+    const recaptchaVerifyUrl = `https://www.google.com/recaptcha/api/siteverify`;
+    const recaptchaResponse = await fetch(recaptchaVerifyUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `secret=${recaptchaSecretKey}&response=${recaptchaToken}`,
+    });
+
+    const recaptchaData = await recaptchaResponse.json();
+
+    if (!recaptchaData.success || recaptchaData.score < 0.2) {
+      console.error('reCAPTCHA verification failed:', recaptchaData);
+      return NextResponse.json(
+        { error: 'reCAPTCHA verification failed. Please try again.' },
+        { status: 403 }
+      );
+    }
     
     // Environment variable checks
     const serviceId = process.env.EMAILJS_SERVICE_ID;
@@ -47,7 +77,6 @@ export async function POST(req: Request) {
       template_params: {
         user_name,
         user_email,
-        // Ensure user_company is an empty string if not provided, as templates expect a string
         user_company: user_company || '', 
         message,
       },
@@ -75,7 +104,6 @@ export async function POST(req: Request) {
     }
   } catch (error) {
     console.error('Contact form API handler error:', error);
-    // Generic error message to client for security
     return NextResponse.json(
       { error: 'Failed to send message due to an internal server error.' },
       { status: 500 }

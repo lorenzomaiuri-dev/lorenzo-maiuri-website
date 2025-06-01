@@ -1,10 +1,12 @@
+
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Send, Loader } from 'lucide-react';
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react19-google-recaptcha-v3';
 
 // Validation schema for the contact form
 const contactSchema = z.object({
@@ -12,29 +14,47 @@ const contactSchema = z.object({
   user_email: z.string().email({ message: 'Insert a valid email' }),
   user_company: z.string().max(50, { message: 'Company must be at most 50 characters' }).optional(),
   message: z.string().min(10, { message: 'Message must be at least 10 characters' }).max(5000, { message: 'Message must be at most 5000 characters' }),
+  recaptchaToken: z.string().min(1, { message: 'reCAPTCHA verification failed. Please try again.' }),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-export default function ContactForm() {
+function InnerContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   const {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
+
+
+  const generateRecaptchaToken = useCallback(async () => {
+    if (!executeRecaptcha) {
+      console.log('Execute recaptcha not yet available');
+      return;
+    }
+    const token = await executeRecaptcha('contact_form_submission');
+    setValue('recaptchaToken', token);
+  }, [executeRecaptcha, setValue]);
+
+  useEffect(() => {
+    generateRecaptchaToken();
+  }, [generateRecaptchaToken]);
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     setError(null);
 
     try {
+      await generateRecaptchaToken();
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -44,13 +64,14 @@ export default function ContactForm() {
       });
 
       if (!response.ok) {
-        throw new Error('Error sending the message. Retry.');
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Error sending the message. Retry.');
       }
       
       setSuccess(true);
       reset();
-
-      // Reset success state after 5 seconds
+      generateRecaptchaToken();
+      
       setTimeout(() => {
         setSuccess(false);
       }, 5000);
@@ -123,6 +144,11 @@ export default function ContactForm() {
         )}
       </div>
       
+      <input type="hidden" {...register('recaptchaToken')} />
+      {errors.recaptchaToken && (
+        <p className="mt-1 text-sm text-red-500">{errors.recaptchaToken.message}</p>
+      )}
+      
       {error && (
         <div className="p-3 bg-red-900 border border-red-700 text-red-400 rounded-md">
           {error}
@@ -155,5 +181,24 @@ export default function ContactForm() {
         )}
       </button>
     </form>
+  );
+}
+
+export default function ContactForm() {
+  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+
+  if (!recaptchaSiteKey) {
+    console.error('NEXT_PUBLIC_RECAPTCHA_SITE_KEY is not defined. reCAPTCHA will not work.');
+    return (
+      <div className="text-red-500 text-center">
+        Error: reCAPTCHA site key is missing. Please configure your environment variables.
+      </div>
+    );
+  }
+
+  return (
+    <GoogleReCaptchaProvider reCaptchaKey={recaptchaSiteKey}>
+      <InnerContactForm />
+    </GoogleReCaptchaProvider>
   );
 }
