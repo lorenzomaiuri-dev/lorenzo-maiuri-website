@@ -8,7 +8,6 @@ import { type Service } from '@/lib/types';
 import servicesData from '@/content//services/services.json';
 import { useState, useCallback } from 'react';
 
-// Animation variants (mantienili come sono)
 const imageVariants = {
     initial: { opacity: 0, scale: 0.95 },
     animate: { opacity: 1, scale: 1 },

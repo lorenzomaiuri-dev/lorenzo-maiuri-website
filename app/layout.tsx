@@ -1,10 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Roboto_Mono } from 'next/font/google'
-import Header from '@/components/layout/Header'
+import dynamic from 'next/dynamic'
+const Header = dynamic(() => import('@/components/layout/Header'))
 import Footer from '@/components/layout/Footer'
 
-// Carica i font
+// Font
 const inter = Inter({ 
   subsets: ['latin'],
   display: 'swap',
@@ -17,20 +18,31 @@ const robotoMono = Roboto_Mono({
   variable: '--font-roboto-mono',
 })
 
-// Metadata per SEO
+// SEO Metadata
 export const metadata: Metadata = {
-  title: 'Lorenzo Maiuri - AI, Software & Automation',
-  description: 'Software engineer e consulente AI con competenze multidisciplinari in intelligenza artificiale, machine learning e automazione per applicazioni business.',
-  keywords: 'AI, software, automation, machine learning, business, consulente, developer',
+  title: 'Lorenzo Maiuri – AI, Software & Automation',
+  description: 'AI engineer and software consultant specialized in machine learning, automation, and fullstack development for business-critical applications.',
+  keywords: [
+    'AI Engineer',
+    'Software Developer',
+    'Machine Learning',
+    'Automation',
+    'Fullstack Developer',
+    'Freelance Consultant',
+    'Data Engineering',
+    'Business Applications',
+    'Custom Software',
+  ],
   openGraph: {
-    title: 'Lorenzo Maiuri - AI, Software & Automation',
-    description: 'Software engineer e consulente AI con competenze multidisciplinari in intelligenza artificiale, machine learning e automazione per applicazioni business.',
+    title: 'Lorenzo Maiuri – AI, Software & Automation',
+    description: 'AI engineer and software consultant specialized in machine learning, automation, and fullstack development for business-critical applications.',
     url: 'https://lorenzomaiuri.com',
     siteName: 'Lorenzo Maiuri',
-    locale: 'it_IT',
+    locale: 'en_US',
     type: 'website',
   },
 }
+
 
 export default function RootLayout({
   children,
@@ -38,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="it" className={`${inter.variable} ${robotoMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
       <body className="flex flex-col min-h-screen">      
         <Header />
         <main className="flex-grow">

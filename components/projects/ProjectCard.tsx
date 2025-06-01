@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         )}
         <Link
           href={`/projects/${project.slug}`}
-          className="inline-flex items-center text-blue-500 hover:text-blue-400 font-medium transition-colors"
+          className="inline-flex items-center text-primary-light hover:text-blue-400 font-medium transition-colors"
         >
           Learn more
           <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
