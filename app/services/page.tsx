@@ -10,8 +10,66 @@ import servicesData from '@/content/services/services.json';
 export default function ServicesPage() {
   const services = servicesData as Service[];
 
+  const baseUrl = 'https://lorenzomaiuri.dev';
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ServicePage',
+    name: 'My Services | Lorenzo Maiuri',
+    description: 'Specialized services designed to help your business leverage technology for growth, efficiency and innovation. From AI implementation to custom software development and to data engineering, I provide comprehensive solutions tailored to your unique needs.',
+    url: `${baseUrl}/services`,
+    serviceArea: {
+      '@type': 'AdministrativeArea',
+      name: 'Global',
+    },
+    audience: {
+      '@type': 'Audience',
+      name: 'Businesses looking for tech solutions',
+    },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: services.map((service, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Service',
+          name: service.title,
+          description: service.description,
+          url: `${baseUrl}/services#${service.id}`,
+          image: service.imageDetail ? `${baseUrl}${service.imageDetail}` : undefined,
+          provider: {
+            '@type': 'Person',
+            name: 'Lorenzo Maiuri',
+            url: baseUrl,
+          },
+        },
+      })),
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Lorenzo Maiuri',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}/images/seo/logo.png`,
+      },
+    },
+    image: {
+      '@type': 'ImageObject',
+      url: `${baseUrl}/images/seo/services.png`,
+      width: 1200,
+      height: 630,
+      alt: 'My Services | Lorenzo Maiuri',
+    },
+    datePublished: '2025-06-01',
+    dateModified: new Date().toISOString().split('T')[0],  
+  };
+
   return (
     <div className="bg-black text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="py-24 bg-black">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-8">My Services</h1>

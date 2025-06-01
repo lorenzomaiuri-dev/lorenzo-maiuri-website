@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "postbuild": "next-sitemap",    
     "start": "next start",
     "lint": "next lint"
   },
@@ -23,6 +24,7 @@
     "motion": "^12.10.3",
     "next": "15.3.0",
     "next-mdx-remote": "^5.0.0",
+    "next-seo": "^6.8.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.55.0",
