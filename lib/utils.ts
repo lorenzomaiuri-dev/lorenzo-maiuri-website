@@ -7,8 +7,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-// Manually import your project data here
-// For example:
+// Importing project data from JSON files
 import featuredProject1 from '../content/featured_projects/b2b-portal-redesign.json';
 import featuredProject2 from '../content/featured_projects/data-warehouse-modernization.json';
 import featuredProject3 from '../content/featured_projects/documents-customer-chatbot.json';
@@ -91,6 +90,6 @@ export function getAllFeaturedProjects(): Project[] {
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {
-  const allCombinedProjects = [...allFeaturedProjectsData, ...allProjectsData];
+  const allCombinedProjects = getAllProjects()
   return allCombinedProjects.find((project) => project.slug === slug);
 }
