@@ -34,7 +34,7 @@ export default function ProjectsSection({ featuredProjects }: { featuredProjects
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                 <p className="text-gray-400 mb-4">{project.description}</p>
-                <Link href={'/projects/' + project.slug} className="text-primary hover:text-primary-dark font-medium inline-flex items-center">
+                <Link href={'/projects/' + project.slug} className="text-primary-light hover:text-primary-dark font-medium inline-flex items-center">
                   View details
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
