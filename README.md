@@ -1,32 +1,52 @@
-# 🌐 Lorenzo Maiuri — Personal Website
+# 🌐 Lorenzo Maiuri — AI Engineer & Software Consultant
 
-This is the official personal website of **Lorenzo Maiuri**:  
-Software Developer • AI Engineer • Mathematics Student
-
-Built with [Next.js](https://nextjs.org/) and deployed on [Cloudflare Pages](https://pages.cloudflare.com/), the site showcases my professional background, technical skills, projects, and contact details — and includes an intelligent chatbot to answer questions about my work.
+Welcome to the official source code of [lorenzomaiuri.dev](https://lorenzomaiuri.dev) — my personal and professional website.  
+This site is the digital hub for my business, portfolio, and technical expertise in AI, software engineering, and data solutions.
 
 ## 🚀 Features
 
-- ⚡ Fast, responsive, frontend
-- 🎨 Minimal, developer-friendly design
-- 📄 Project portfolio & detailed skillset
-- 💬 AI-powered assistant
-- 🔍 SEO optimized
-- 📱 Mobile-friendly layout
+- **Modern Portfolio**: Clean, responsive design showcasing my projects, services, and expertise.
+- **AI-Powered Chatbot**: [LorenzoBot](https://github.com/lorenzomaiuri-dev/lorenzo-maiuri-chatbot) — an interactive assistant that answers questions about my background, skills, and offerings.
+- **Project Showcases**: Detailed pages for featured and additional projects, including tech stack, live demos, and source code links.
+- **Service Pages**: Comprehensive descriptions of consulting services, case studies, and business solutions.
+- **SEO Optimized**: Rich metadata, Open Graph, and structured data for discoverability.
+- **Accessibility & Performance**: Mobile-first, fast-loading, and accessible UI.
+- **Contact & Social Links**: Easy ways to get in touch or connect via LinkedIn, GitHub, and more.
 
 ## 🛠 Tech Stack
 
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, SSR, API routes)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/), custom CSS, and utility classes
+- **Animation**: [Framer Motion](https://www.framer.com/motion/) for smooth UI transitions
+- **Icons**: [Lucide](https://lucide.dev/) and [React Icons](https://react-icons.github.io/react-icons/)
+- **Chatbot**: Custom React components, API integration, and context-aware actions
+- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/) & [OpenNext](https://open-next.js.org/)
+- **SEO**: [next-seo](https://github.com/garmeeh/next-seo), sitemap, and structured data
+- **TypeScript**: Full type safety across the codebase
+- **Testing & Linting**: ESLint, Prettier, and strict TypeScript config
 
+## 📂 Project Structure
+
+- `app/` — Next.js app directory (pages, layouts, API routes)
+- `components/` — Reusable UI and feature components
+- `content/` — Project and service data (JSON)
+- `lib/` — Utilities, types, and hooks
+- `public/` — Static assets (images, favicon, sitemap)
+- `app/globals.css` — Global styles and Tailwind config
 
 ## 📬 Contact
 
-If you're interested in working with me or want to get in touch:
+Interested in working together or want to know more?
 
-- ✉️ maiurilorenzo@gmail.com
-- 🔗 linkedin.com/in/maiurilorenzo
+- Email: [maiurilorenzo@gmail.com](mailto:maiurilorenzo@gmail.com)
+- LinkedIn: [linkedin.com/in/maiurilorenzo](https://www.linkedin.com/in/maiurilorenzo/)
+- GitHub: [github.com/lorenzomaiuri-dev](https://github.com/lorenzomaiuri-dev)
 
 ## 🙏 Acknowledgements
 
-Special thanks to open-source libraries, frameworks and the dev community that make this kind of work possible
+Thanks to the open-source community and all contributors to the libraries and tools that power this project.
+
+## 📄 License
+
+This project is licensed under the GNU AGPL v3.0.  
+See [LICENSE](LICENSE) for details.
