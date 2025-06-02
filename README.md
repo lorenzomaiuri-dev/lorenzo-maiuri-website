@@ -1,3 +1,6 @@
+[![License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 # 🌐 Lorenzo Maiuri — AI Engineer & Software Consultant
 
 Welcome to the official source code of [lorenzomaiuri.dev](https://lorenzomaiuri.dev) — my personal and professional website.  
@@ -50,3 +53,9 @@ Thanks to the open-source community and all contributors to the libraries and to
 
 This project is licensed under the GNU AGPL v3.0.  
 See [LICENSE](LICENSE) for details.
+
+<!-- LINKS & IMAGES -->
+[license-shield]: https://img.shields.io/badge/license-AGPL%20V3-blue
+[license-url]: https://opensource.org/license/agpl-v3
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white
+[linkedin-url]: https://www.linkedin.com/in/maiurilorenzo
