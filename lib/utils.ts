@@ -8,9 +8,6 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // Importing project data from JSON files
-import featuredProject1 from '../content/featured_projects/b2b-portal-redesign.json';
-import featuredProject2 from '../content/featured_projects/data-warehouse-modernization.json';
-import featuredProject3 from '../content/featured_projects/documents-customer-chatbot.json';
 import project1 from '../content/projects/airflow-migration.json';
 import project2 from '../content/projects/data-warehouse-modernization.json';
 import project3 from '../content/projects/b2b-app-xamarin-to-maui-migration.json';
@@ -44,9 +41,9 @@ import project29 from '../content/projects/veterinary-platform-integrations.json
 
 // Define your project arrays directly
 const allFeaturedProjectsData: Project[] = [
-  { ...featuredProject1},
-  { ...featuredProject2},
-  { ...featuredProject3},
+  { ...project4},
+  { ...project2},
+  { ...project10},
 ];
 
 const allProjectsData: Project[] = [
