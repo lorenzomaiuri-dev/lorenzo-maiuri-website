@@ -41,7 +41,7 @@ This site is the digital hub for my business, portfolio, and technical expertise
 
 Interested in working together or want to know more?
 
-- Email: [maiurilorenzo@gmail.com](mailto:maiurilorenzo@gmail.com)
+- Email: [contact@lorenzomaiuri.dev](mailto:contact@lorenzomaiuri.dev)
 - LinkedIn: [linkedin.com/in/maiurilorenzo](https://www.linkedin.com/in/maiurilorenzo/)
 - GitHub: [github.com/lorenzomaiuri-dev](https://github.com/lorenzomaiuri-dev)
 
