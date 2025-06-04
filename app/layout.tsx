@@ -138,6 +138,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
+      <head>
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="42c9798b-e169-491e-947f-fbf026f4df01"></script>
+      </head>
       <body className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">
