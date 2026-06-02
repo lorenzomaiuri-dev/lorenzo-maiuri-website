@@ -1,0 +1,39 @@
+version: 2
+updates:
+  # Frontend NPM dependencies (React, Next.js, etc.)
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      react-ecosystem:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+      nextjs-ecosystem:
+        patterns:
+          - "next"
+          - "eslint-config-next"
+      linters-and-formatters:
+        patterns:
+          - "eslint*"
+          - "prettier*"
+          - "biome*"
+          - "@typescript-eslint*"
+
+  # GitHub Actions
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+
+  # Terraform providers
+  - package-ecosystem: terraform
+    directory: /infra
+    schedule:
+      interval: weekly
+      day: monday
