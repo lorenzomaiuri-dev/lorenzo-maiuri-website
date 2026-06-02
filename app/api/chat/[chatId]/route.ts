@@ -1,5 +1,3 @@
-export const runtime = "edge";
-
 const BACKEND_URL = process.env.BACKEND_API_URL;
 const BACKEND_KEY = process.env.BACKEND_API_KEY;
 
