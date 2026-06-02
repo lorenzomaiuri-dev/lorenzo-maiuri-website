@@ -19,7 +19,7 @@ jobs:
     name: Terraform Plan
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # WIF auth for GCS Terraform state (same pool + SA as the chatbot repo)
       - uses: google-github-actions/auth@v2
