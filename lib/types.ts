@@ -1,109 +1,215 @@
-import { Brain, Code, Database } from 'lucide-react'
-import { type LucideIcon } from 'lucide-react';
+/* ─── Shared primitives ──────────────────────────────────────────────── */
 
-// lib/types.ts
-export interface Project {
-  slug: string;
+export type Metric = {
+  value: string; // "2M+", "<180ms", "99.9%", "live"
+  label: string; // "monthly active users"
+};
+
+/* ─── Projects ───────────────────────────────────────────────────────── */
+
+export type ProjectStatus = "live" | "delivered";
+export type ProjectType = "client" | "personal" | "open-source";
+// categories: filtering truth; tags: display string (may differ from categories)
+export type ProjectCategory = "ai-agents" | "nlp-ml" | "data-infra" | "open-source";
+
+export type Decision = {
+  num: string; // "// 01"
   title: string;
   description: string;
-  highlighted?: boolean;
-  image?: string;
-  liveUrl?: string | null | undefined;
-  githubUrl?: string | null | undefined;
-  technologies?: string[];
-  sections?: {
-    title?: string;
-    content?: string;
-    listItems?: string[];
+};
+
+export type ResultCard = {
+  value: string; // "2M+", "<180ms"
+  label: string;
+  context: string;
+  headline?: boolean; // green border highlight
+};
+
+export type ArchNode = {
+  icon: string; // Tabler icon name, e.g. "network"
+  name: string; // "COORDINATOR" — mono uppercase
+  description: string; // supports \n for line breaks
+  highlight?: boolean; // teal border
+};
+
+export type ArchSubNode = {
+  label: string; // "RETRIEVAL"
+  description: string; // "semantic search · vector store"
+};
+
+export type ArchDiagram = {
+  title: string;
+  hint?: string;
+  flow: ArchNode[];
+  subNodes?: ArchSubNode[];
+};
+
+export type CaseStudy = {
+  challenge: string;
+  pullQuote?: string;
+  approach: string;
+  architecture?: ArchDiagram;
+  decisions: Decision[];
+  results: ResultCard[];
+  retrospective: string;
+  stack: {
+    label: string;
+    items: string[];
   }[];
-}
+};
 
-export interface ProjectCardProps {
-  project: Pick<Project, 'slug'>;
-}
-
-export interface GenericParams {
+export type Project = {
   slug: string;
-}
-
-export interface Service {
-  id: string;
   title: string;
+  /** Display string, e.g. "AI · agents · cloud" */
+  tags: string;
+  /** Filtering truth — may differ from tags */
+  categories: ProjectCategory[];
+  status: ProjectStatus;
+  type: ProjectType;
+  client?: string;
+  role: string;
+  year: string;
+  duration?: string;
   description: string;
-  image: string;
-  imageDetail: string;
-  link: string;
-  icon: string;
-  features: string[];
-  caseStudy: {
-    title: string;
-    description: string;
-    link: string;
+  result?: string;
+  stack: string[];
+  metrics?: Metric[];
+  featured?: boolean;
+  hasCaseStudy?: boolean;
+  caseStudy?: CaseStudy;
+};
+
+export type HuggingFaceModel = {
+  tag: string;
+  name: string;
+  description: string;
+  footer: string;
+  year: string;
+  url: string;
+};
+
+/* ─── Profile ────────────────────────────────────────────────────────── */
+
+export type TimelineItem = {
+  dateRange: string;
+  role: string;
+  org: string;
+  description: string;
+  badge?: {
+    kind: "current" | "studying";
+    label?: string;
   };
 };
 
-
-export const iconMap: Record<string, LucideIcon> = {
-  "Brain": Brain,
-  "Code": Code,
-  "Database": Database,
+export type Principle = {
+  num: string;
+  title: string;
+  description: string;
+  featured?: boolean; // larger card layout (principle 01)
 };
 
-export interface ChatRequest {
-  chatId?: string | null;
-  message: string;
-}
+export type ScoreCard = {
+  score: string; // "1000"
+  denominator: string; // "/1k"
+  title: string;
+  org: string;
+};
 
-export interface Message {
-  role: 'user' | 'assistant';
+export type CredentialItem = {
+  title: string;
+  org: string;
+  year: string;
+  tealYear?: boolean;
+  recent?: boolean;
+};
+
+export type CredentialBlock = {
+  heading: string;
+  items: CredentialItem[];
+};
+
+export type SocialLink = {
+  label: string;
+  url: string;
+};
+
+export type ProfileMeta = {
+  name: string;
+  location: string;
+  remote: string;
+  languages: string;
+  availability: string;
+  social: SocialLink[];
+};
+
+/** Only used in the ContactModal — separate from bio data */
+export type ContactMeta = {
+  email: string;
+  calUrl: string;
+};
+
+export type ProfileData = {
+  meta: ProfileMeta;
+  contact: ContactMeta;
+  timeline: TimelineItem[];
+  principles: Principle[];
+  scores: ScoreCard[];
+  credentials: CredentialBlock[];
+};
+
+/* ─── Stack ──────────────────────────────────────────────────────────── */
+
+export type StackItem = {
+  name: string;
+  core?: boolean;
+};
+
+export type StackGroup = {
+  label: string;
+  items: StackItem[];
+  primary?: boolean;
+};
+
+/* ─── Chat ───────────────────────────────────────────────────────────── */
+
+export type ChatbotMeta = {
+  model: string;
+  agentType: string;
+  memory: string;
+  suggestedPrompts: string[];
+};
+
+/* ─── Terminal ───────────────────────────────────────────────────────── */
+
+export type TerminalNode =
+  | { type: "file"; name: string; content: string; executable?: boolean }
+  | { type: "dir"; name: string; children: TerminalNode[] };
+
+/* ─── Chat messages (used by useChatbot hook) ────────────────────────── */
+
+export type Message = {
+  role: "user" | "assistant";
   content: string;
   timestamp: string;
   action?: ChatResponseAction;
-  isExpanded?: boolean; 
-}
+};
 
-export type ChatResponseAction =
-  | { action_type: 'show_contact'; data: { email?: string; linkedin?: string; github?: string; portfolio?: string; } }
-  | { action_type: 'show_projects'; data: { projects: Array<{ title: string; description: string; link?: string; technologies: string[]; }> } }
-  | { action_type: 'show_bio'; data: { bio: string } }
-  | { action_type: 'show_skills'; data: { skills: Record<string, string[]> } }
-  | { action_type: 'show_experience'; data: { experience: Array<{ title: string; company: string; period: string; description: string; }> } }
-  | { action_type: 'show_certifications'; data: { certifications: Array<{ name: string; year: number; }> } }
-  | { action_type: 'send_email'; data: { subject?: string; body?: string } }
-  | { action_type: 'display_message'; data: { message: string } }
-  | { action_type: 'none'; data: {} };
+/* ─── Chat API (preserved from existing backend) ─────────────────────── */
 
-export interface ChatResponse {
-  success?: boolean;
+export type ChatRequest = {
+  chatId: string | null;
+  message: string;
+};
+
+export type ChatResponseAction = {
+  action_type: string;
+  data: Record<string, unknown>;
+};
+
+export type ChatResponse = {
+  message: string;
   chatId: string;
-  message: string;
-  thought?: string;
-  action: ChatResponseAction;
+  action?: ChatResponseAction;
   error?: string;
-  fallback?: boolean;
-}
-
-export interface ToastState {
-  show: boolean;
-  message: string;
-  type?: 'success' | 'info' | 'warning' | 'error';
-  duration?: number;
-  link?: { href: string; text: string; target?: '_self' | '_blank' };
-}
-
-export interface ToastProps {
-  message: string;
-  type?: 'success' | 'info' | 'warning' | 'error';
-  onClose: () => void;
-  duration?: number;
-  link?: {
-    href: string;
-    text: string;
-    target?: '_self' | '_blank';
-  };
-  show: boolean;
-}
-
-export interface LorenzoBotProps {
-  onNotification?: () => void;
-}
+};

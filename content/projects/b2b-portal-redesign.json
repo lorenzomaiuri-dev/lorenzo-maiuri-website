@@ -6,7 +6,19 @@
   "image": "/images/projects/b2b-portal-redesign.jpeg",
   "liveUrl": null,
   "githubUrl": null,
-  "technologies": ["JavaScript", "C#", ".NET", "React", "API Integration", "UX Design", "Google Analytics", "Strapi (Headless CMS)", "Docker", "Nginx", "PostgreSQL"],
+  "technologies": [
+    "JavaScript",
+    "C#",
+    ".NET",
+    "React",
+    "API Integration",
+    "UX Design",
+    "Google Analytics",
+    "Strapi (Headless CMS)",
+    "Docker",
+    "Nginx",
+    "PostgreSQL"
+  ],
   "sections": [
     {
       "title": "Context",

@@ -6,7 +6,19 @@
   "image": "/images/projects/intelligent-chatbot.jpg",
   "liveUrl": null,
   "githubUrl": null,
-  "technologies": ["GPT-4o", "LlamaIndex", "ChromaDB", "FastAPI", "Python", "Redis", "Salesforce API", "WordPress PHP", "Docker", "AWS EC2", "Phoenix by Arize AI"],
+  "technologies": [
+    "GPT-4o",
+    "LlamaIndex",
+    "ChromaDB",
+    "FastAPI",
+    "Python",
+    "Redis",
+    "Salesforce API",
+    "WordPress PHP",
+    "Docker",
+    "AWS EC2",
+    "Phoenix by Arize AI"
+  ],
   "sections": [
     {
       "title": "Context",

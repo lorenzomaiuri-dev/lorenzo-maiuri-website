@@ -1,18 +1,20 @@
-import Link from 'next/link';
-import { Metadata } from 'next';
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: '404 - Page Not Found | Lorenzo Maiuri',
-  description: 'The page you are looking for does not exist.',
+  title: "404 - Page Not Found | Lorenzo Maiuri",
+  description: "The page you are looking for does not exist.",
 };
 
 export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white px-4 py-12">
       <h1 className="text-6xl md:text-8xl font-bold text-blue-500 mb-4 animate-pulse">404</h1>
-      <h2 className="text-2xl md:text-4xl font-semibold text-gray-100 mb-6 text-center">Page Not Found</h2>
+      <h2 className="text-2xl md:text-4xl font-semibold text-gray-100 mb-6 text-center">
+        Page Not Found
+      </h2>
       <p className="text-lg md:text-xl text-gray-300 mb-8 text-center max-w-md">
-        Oops! It looks like you've stumbled upon a page that doesn't exist.
+        Oops! It looks like you&apos;ve stumbled upon a page that doesn&apos;t exist.
       </p>
       <Link
         href="/"

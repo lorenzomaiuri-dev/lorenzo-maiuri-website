@@ -1,12 +1,17 @@
 {
-    "slug": "gdpr-bert",
-    "title": "AI-Powered Personal Data Detection for GDPR Compliance",
-    "highlighted": true,
-    "description": "Developed and implemented a BERT-based NLP model to automatically detect personal data in order notes, achieving 85% increased accuracy and reducing manual review time by 90%, significantly strengthening GDPR compliance",
-    "image": "/images/projects/gdpr-bert.jpeg",
-    "liveUrl": null,
+  "slug": "gdpr-bert",
+  "title": "AI-Powered Personal Data Detection for GDPR Compliance",
+  "highlighted": true,
+  "description": "Developed and implemented a BERT-based NLP model to automatically detect personal data in order notes, achieving 85% increased accuracy and reducing manual review time by 90%, significantly strengthening GDPR compliance",
+  "image": "/images/projects/gdpr-bert.jpeg",
+  "liveUrl": null,
   "githubUrl": null,
-  "technologies": ["Natural Language Processing (NLP)", "BERT", "Python", "Hugging Face Transformers"],
+  "technologies": [
+    "Natural Language Processing (NLP)",
+    "BERT",
+    "Python",
+    "Hugging Face Transformers"
+  ],
   "sections": [
     {
       "title": "Context",
@@ -26,7 +31,7 @@
     },
     {
       "title": "Key Steps",
-      "listItems": [        
+      "listItems": [
         "BERT Model Implementation: Utilized a BERT-based architecture, fine-tuned to effectively understand the context and nuances of personal data within the specific domain of order notes.",
         "Sensitive Information Identification: Leveraged the model to accurately flag sensitive information, enabling the team to focus on potential privacy violations.",
         "Integration with Existing Workflows: Designed the system for seamless integration into the existing compliance review workflows, allowing flagged anomalies for further review.",
@@ -47,4 +52,4 @@
       ]
     }
   ]
-  }
+}

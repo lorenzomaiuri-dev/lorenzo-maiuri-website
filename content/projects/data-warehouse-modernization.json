@@ -6,7 +6,16 @@
   "image": "/images/projects/data-warehouse-modernization.jpeg",
   "liveUrl": null,
   "githubUrl": null,
-  "technologies": ["PostgreSQL", "Oracle", "Python", "ETL", "Data Migration", "SQL", "CI/CD", "Software Infrastructure"],
+  "technologies": [
+    "PostgreSQL",
+    "Oracle",
+    "Python",
+    "ETL",
+    "Data Migration",
+    "SQL",
+    "CI/CD",
+    "Software Infrastructure"
+  ],
   "sections": [
     {
       "title": "Context",
