@@ -55,6 +55,7 @@ This project is licensed under the GNU AGPL v3.0.
 See [LICENSE](LICENSE) for details.
 
 <!-- LINKS & IMAGES -->
+
 [license-shield]: https://img.shields.io/badge/license-AGPL%20V3-blue
 [license-url]: https://opensource.org/license/agpl-v3
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin&logoColor=white
