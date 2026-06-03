@@ -1,6 +1,6 @@
 output "worker_hostname" {
   description = "Custom domain bound to the Worker."
-  value       = cloudflare_worker_domain.lorenzomaiuri.hostname
+  value       = cloudflare_workers_custom_domain.lorenzomaiuri.hostname
 }
 
 output "zone_name" {

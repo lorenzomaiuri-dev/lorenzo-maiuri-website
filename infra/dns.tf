@@ -4,7 +4,7 @@ locals {
 
 # ── CNAME records ──────────────────────────────────────────────────────────────
 
-resource "cloudflare_record" "cname_www" {
+resource "cloudflare_dns_record" "cname_www" {
   zone_id = local.zone_id
   name    = "www"
   type    = "CNAME"
@@ -13,7 +13,7 @@ resource "cloudflare_record" "cname_www" {
   ttl     = 1
 }
 
-resource "cloudflare_record" "cname_api" {
+resource "cloudflare_dns_record" "cname_api" {
   zone_id = local.zone_id
   name    = "api"
   type    = "CNAME"
@@ -26,7 +26,7 @@ resource "cloudflare_record" "cname_api" {
 # Created automatically when a Worker custom domain is bound to the root zone.
 # Managed here to prevent drift; value 100:: is Cloudflare's anycast address.
 #
-#resource "cloudflare_record" "aaaa_root" {
+#resource "cloudflare_dns_record" "aaaa_root" {
 #  zone_id = local.zone_id
 #  name    = "lorenzomaiuri.dev"
 #  type    = "AAAA"
@@ -37,7 +37,7 @@ resource "cloudflare_record" "cname_api" {
 
 # ── MX records — Cloudflare Email Routing ─────────────────────────────────────
 
-#resource "cloudflare_record" "mx_route1" {
+#resource "cloudflare_dns_record" "mx_route1" {
 #  zone_id  = local.zone_id
 #  name     = "lorenzomaiuri.dev"
 #  type     = "MX"
@@ -47,7 +47,7 @@ resource "cloudflare_record" "cname_api" {
 #  ttl      = 1
 #}
 
-#resource "cloudflare_record" "mx_route2" {
+#resource "cloudflare_dns_record" "mx_route2" {
 #  zone_id  = local.zone_id
 #  name     = "lorenzomaiuri.dev"
 #  type     = "MX"
@@ -57,7 +57,7 @@ resource "cloudflare_record" "cname_api" {
 #  ttl      = 1
 #}
 
-#resource "cloudflare_record" "mx_route3" {
+#resource "cloudflare_dns_record" "mx_route3" {
 #  zone_id  = local.zone_id
 #  name     = "lorenzomaiuri.dev"
 #  type     = "MX"
@@ -69,7 +69,7 @@ resource "cloudflare_record" "cname_api" {
 
 # ── TXT records ────────────────────────────────────────────────────────────────
 
-resource "cloudflare_record" "txt_spf" {
+resource "cloudflare_dns_record" "txt_spf" {
   zone_id = local.zone_id
   name    = "lorenzomaiuri.dev"
   type    = "TXT"
@@ -78,7 +78,7 @@ resource "cloudflare_record" "txt_spf" {
   ttl     = 1
 }
 
-resource "cloudflare_record" "txt_google_verification" {
+resource "cloudflare_dns_record" "txt_google_verification" {
   zone_id = local.zone_id
   name    = "lorenzomaiuri.dev"
   type    = "TXT"
@@ -87,7 +87,7 @@ resource "cloudflare_record" "txt_google_verification" {
   ttl     = 3600
 }
 
-resource "cloudflare_record" "txt_dmarc" {
+resource "cloudflare_dns_record" "txt_dmarc" {
   zone_id = local.zone_id
   name    = "_dmarc"
   type    = "TXT"
@@ -100,7 +100,7 @@ resource "cloudflare_record" "txt_dmarc" {
 # The key is split into two chunks in the DNS record for length compliance;
 # stored here as a single concatenated string (the provider handles chunking).
 #
-#resource "cloudflare_record" "txt_dkim" {
+#resource "cloudflare_dns_record" "txt_dkim" {
 #  zone_id = local.zone_id
 #  name    = "cf2024-1._domainkey"
 #  type    = "TXT"
