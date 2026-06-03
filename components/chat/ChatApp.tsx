@@ -10,6 +10,7 @@ import {
 } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 import { Fragment, useEffect, useRef, useState } from "react";
+import Markdown from "react-markdown";
 import CitationChip from "@/components/chat/CitationChip";
 import ToolChip from "@/components/chat/ToolChip";
 import StatusDot from "@/components/ui/StatusDot";
@@ -34,24 +35,37 @@ function agentLabel(agent: string | null, slowWarning: boolean): string {
   return AGENT_LABELS[agent] ?? `// ${agent.replace(/_agent$/, "").replace(/_/g, " ")}`;
 }
 
-// ─── Inline content renderer (bold + code) ────────────────────────────────
+// ─── Markdown content renderer ───────────────────────────────────────────
 
 function MsgContent({ text, isUser }: { text: string; isUser: boolean }) {
-  const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g);
   return (
-    <>
-      {parts.map((part, i) => {
-        if (part.startsWith("**") && part.endsWith("**")) {
-          return (
-            <strong key={i} className="text-teal font-medium">
-              {part.slice(2, -2)}
-            </strong>
-          );
-        }
-        if (part.startsWith("`") && part.endsWith("`")) {
-          return (
+    <Markdown
+      components={{
+        p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+        strong: ({ children }) => (
+          <strong className={isUser ? "font-semibold" : "text-teal font-medium"}>{children}</strong>
+        ),
+        em: ({ children }) => <em className="italic opacity-80">{children}</em>,
+        ul: ({ children }) => (
+          <ul className="list-disc list-outside pl-4 mb-2 last:mb-0 space-y-0.5">{children}</ul>
+        ),
+        ol: ({ children }) => (
+          <ol className="list-decimal list-outside pl-4 mb-2 last:mb-0 space-y-0.5">{children}</ol>
+        ),
+        li: ({ children }) => <li className="leading-[1.6]">{children}</li>,
+        code: ({ children, className }) => {
+          const isBlock = !!className;
+          return isBlock ? (
             <code
-              key={i}
+              className={[
+                "block font-mono text-[11px] p-3 rounded-md border border-hairline overflow-x-auto my-2",
+                isUser ? "bg-white/10 border-transparent" : "bg-canvas border-outline-faint",
+              ].join(" ")}
+            >
+              {children}
+            </code>
+          ) : (
+            <code
               className={[
                 "font-mono text-[11px] px-[5px] py-px rounded-[3px] border border-hairline",
                 isUser
@@ -59,18 +73,28 @@ function MsgContent({ text, isUser }: { text: string; isUser: boolean }) {
                   : "bg-canvas border-outline-faint",
               ].join(" ")}
             >
-              {part.slice(1, -1)}
+              {children}
             </code>
           );
-        }
-        return part.split("\n").map((line, j, arr) => (
-          <span key={`${i}-${j}`}>
-            {line}
-            {j < arr.length - 1 && <br />}
-          </span>
-        ));
-      })}
-    </>
+        },
+        pre: ({ children }) => <>{children}</>,
+        a: ({ href, children }) => (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={isUser ? "underline opacity-80" : "text-teal underline"}
+          >
+            {children}
+          </a>
+        ),
+        h1: ({ children }) => <h1 className="text-[15px] font-semibold mb-1 mt-2">{children}</h1>,
+        h2: ({ children }) => <h2 className="text-[14px] font-semibold mb-1 mt-2">{children}</h2>,
+        h3: ({ children }) => <h3 className="text-[13px] font-semibold mb-1 mt-1.5">{children}</h3>,
+      }}
+    >
+      {text}
+    </Markdown>
   );
 }
 
